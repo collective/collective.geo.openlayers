@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<layers>
+    <layer name="collective.geo.openlayers"
+           interface="collective.geo.openlayers.browser.interfaces.IOpenlayers" />
+</layers>

@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.geo.openlayers">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Collective Geo Openlayers"
+      directory="profiles/default"
+      description='Extension profile for Collective Geo Openlayers.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>

@@ -1,0 +1,25 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+          xmlns:browser="http://namespaces.zope.org/browser"
+          xmlns:zope="http://namespaces.zope.org/zope"
+          xmlns:five="http://namespaces.zope.org/five">
+ 
+    <browser:page
+                 name="openlayers"
+                 for="*"
+                 class=".openlayers.OpenLayers"
+                 template="openlayers.pt"
+                 permission = "zope2.View" />
+
+    <browser:page
+        name="openlayers-macros"
+        for="*"
+        class=".openlayers.Macros"
+        permission="zope.Public" />
+
+
+    <browser:resource
+        name="openlayers.css"
+        file="openlayers.css"
+    />
+
+</configure>

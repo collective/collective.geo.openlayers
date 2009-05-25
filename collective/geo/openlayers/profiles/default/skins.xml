@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False">
+
+    <object name="geo_openlayers"
+    meta_type="Filesystem Directory View"
+    directory="collective.geo.openlayers:skins/geo_openlayers"/>
+
+
+ <skin-path name="Plone Default">
+     <layer name="geo_openlayers"
+            insert-after="custom"/>
+ </skin-path>
+
+ 
+</object>
