@@ -27,7 +27,6 @@
             map.addControl(new OpenLayers.Control.LayerSwitcher());
             map.zoomToExtent(new OpenLayers.Bounds(-102.56000,80.08000,107.45604,-6.64597));
 
-//             map.zoomToMaxExtent();
         // -->
 
       </script>
