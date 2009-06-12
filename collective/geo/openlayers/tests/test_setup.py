@@ -9,6 +9,27 @@ class TestSetup(OpenlayersTestCase):
         layer = skins.getSkinPath('Plone Default')
         self.failUnless('geo_openlayers' in layer)
 
+    def test_resource_geopoint_js(self):
+        # bleach
+        try: 
+            self.portal.restrictedTraverse('++resource++geo-point.js')
+        except AttributeError:
+            self.fail('geo-point.js resource not found')
+
+    def test_resource_geoopenlayers_js(self):
+        # bleach -- perseverare e' diabolico!!! (devil)
+        try: 
+            self.portal.restrictedTraverse('++resource++geo-openlayers.js')
+        except AttributeError:
+            self.fail('geo-openlayers.js resource not found')
+
+    def test_resource_openlayerscss(self):
+        # bleach -- perseverare e' diabolico!!! (devil)
+        try: 
+            self.portal.restrictedTraverse('++resource++openlayers.css')
+        except AttributeError:
+            self.fail('openlayers.css resource not found')
+
 def test_suite():
     suite = unittest.TestSuite()
     suite.addTest(unittest.makeSuite(TestSetup))

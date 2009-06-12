@@ -22,4 +22,14 @@
         file="openlayers.css"
     />
 
+    <browser:resource
+        name="geo-point.js"
+        file="geo-point.js"
+    />
+
+    <browser:resource
+        name="geo-openlayers.js"
+        file="geo-openlayers.js"
+    />
+    
 </configure>

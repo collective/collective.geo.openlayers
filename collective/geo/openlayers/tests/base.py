@@ -18,7 +18,7 @@ def setup_product():
 
     fiveconfigure.debug_mode = False
 
-    ztc.installPackage('collective.geo.openlayers')
+    #ztc.installPackage('collective.geo.openlayers')
 
 setup_product()
 ptc.setupPloneSite(products=['collective.geo.openlayers'])

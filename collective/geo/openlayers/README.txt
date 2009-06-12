@@ -1,5 +1,5 @@
 collective.geo.openlayers
-================
+=========================
 
 Overview
 --------
@@ -29,5 +29,3 @@ openlayers javascript
 and its css
     >>> '<link href="++resource++openlayers.css" rel="stylesheet" type="text/css" />' in browser.contents
     True
-
-
