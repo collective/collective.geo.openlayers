@@ -1,9 +1,8 @@
 from Products.Five import BrowserView
-from Products.CMFCore.utils import getToolByName
-from zope.component import getUtility
 
 import zope.publisher.browser
 import zope.app.pagetemplate.viewpagetemplatefile
+
 class Macros(zope.publisher.browser.BrowserView):
     template = zope.app.pagetemplate.viewpagetemplatefile.ViewPageTemplateFile(
         'macros.pt')

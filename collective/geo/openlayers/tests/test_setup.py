@@ -17,14 +17,14 @@ class TestSetup(OpenlayersTestCase):
             self.fail('geo-point.js resource not found')
 
     def test_resource_geoopenlayers_js(self):
-        # bleach -- perseverare e' diabolico!!! (devil)
+        # bleach -- but to persist is diabolical
         try: 
             self.portal.restrictedTraverse('++resource++geo-openlayers.js')
         except AttributeError:
             self.fail('geo-openlayers.js resource not found')
 
     def test_resource_openlayerscss(self):
-        # bleach -- perseverare e' diabolico!!! (devil)
+        # bleach -- but to persist is diabolical
         try: 
             self.portal.restrictedTraverse('++resource++openlayers.css')
         except AttributeError:
