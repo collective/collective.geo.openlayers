@@ -1,7 +1,7 @@
 Introduction
 ============
 
-collective.geo.openlayers include openlayers project into Plone.
+collective.geo.openlayers enables openlayers machinery into Plone.
 
 Requirements
 ------------
@@ -25,3 +25,10 @@ Alternatively, buildout users can install collective.geo.openlayers as part of a
             collective.geo.openlayers
 
 Install this product from the Plone control panel.
+
+Contributors
+============
+
+* Giorgio Borelli - gborelli
+* Silvio Tomatis - silviot
+
