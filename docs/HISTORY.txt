@@ -4,6 +4,7 @@ Changelog
 0.2 (unreleased)
 ----------------
 
+* Gave the Map element a relative position via CSS to allow Plone drop-down menus to appear over the top (z-index doesn't apply unless position is specified). [rockdj]
 * Added ZCML registration for 'img' and 'theme' skin subdirectories.  Without registration, these folders are unable to be seen in Plone & the OpenLayers controls don't appear. [rockdj]
 * Added unit tests to ensure skin subdirectory registration works. [rockdj]
 

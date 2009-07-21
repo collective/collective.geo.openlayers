@@ -349,6 +349,7 @@ div.olControlMousePosition {
     width: 100%;
     height: 500px;
     border: 1px solid black;
+    position: relative;
 }
 .olPopupContent h2 { margin: 0px; padding: 0px; }
 .olPopup p { margin:0px; font-size: .9em;}
