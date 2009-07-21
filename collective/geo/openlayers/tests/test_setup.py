@@ -9,6 +9,24 @@ class TestSetup(OpenlayersTestCase):
         layer = skins.getSkinPath('Plone Default')
         self.failUnless('geo_openlayers' in layer)
 
+    def test_portal_skins_openlayers_images_folder(self):
+        skins = getToolByName(self.portal, 'portal_skins')
+        layer = skins.getSkinPath('Plone Default')
+        self.failUnless('geo_openlayers' in layer)
+	self.failUnless(skins['geo_openlayers'].hasObject('img'))
+        
+    def test_portal_skins_openlayers_theme_folder(self):
+        skins = getToolByName(self.portal, 'portal_skins')
+        layer = skins.getSkinPath('Plone Default')
+        self.failUnless('geo_openlayers' in layer)
+        self.failUnless(skins['geo_openlayers'].hasObject('theme'))  
+
+    def test_portal_skins_marker_image(self):
+        try:
+            self.portal.restrictedTraverse('img/marker.png')
+        except KeyError:
+            self.fail('marker.png image was not found') 
+
     def test_resource_geopoint_js(self):
         # bleach
         try: 

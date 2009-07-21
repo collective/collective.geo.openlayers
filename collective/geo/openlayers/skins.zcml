@@ -5,5 +5,9 @@
 
     <cmf:registerDirectory
                           name="geo_openlayers" />
+    <cmf:registerDirectory
+                          name="geo_openlayers/img" />
+    <cmf:registerDirectory
+                          name="geo_openlayers/theme" />
 
 </configure>
