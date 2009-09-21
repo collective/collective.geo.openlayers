@@ -4,9 +4,18 @@ Changelog
 0.2 (unreleased)
 ----------------
 
-* Gave the Map element a relative position via CSS to allow Plone drop-down menus to appear over the top (z-index doesn't apply unless position is specified). [rockdj]
-* Added ZCML registration for 'img' and 'theme' skin subdirectories.  Without registration, these folders are unable to be seen in Plone & the OpenLayers controls don't appear. [rockdj]
-* Added unit tests to ensure skin subdirectory registration works. [rockdj]
+* Updated OpenLayers.js to 2.8 (+styles and resources)
+* Register all browser pages and resources for IOpenLayers browser
+  layer
+* Removed geo-point.js in favour of editing features provided by OpenLayers
+* Gave the Map element a relative position via CSS to allow Plone
+  drop-down menus to appear over the top (z-index doesn't apply unless
+  position is specified). [rockdj]
+* Added ZCML registration for 'img' and 'theme' skin subdirectories.
+  Without registration, these folders are unable to be seen in Plone &
+  the OpenLayers controls don't appear. [rockdj]
+* Added unit tests to ensure skin subdirectory registration
+  works. [rockdj]
 
 0.1 (2009-06-19)
 ----------------

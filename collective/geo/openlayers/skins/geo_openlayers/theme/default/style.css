@@ -2,6 +2,7 @@ div.olMap {
 	z-index: 0;
     padding: 0px!important;
     margin: 0px!important;
+    cursor: default;
 }
 
 div.olMapViewport {
@@ -213,6 +214,12 @@ div.olControlMousePosition {
 .olControlEditingToolbar .olControlDrawFeaturePolygonItemActive { 
   background-position: -26px -23px ;                                                                   
 }
+.olControlEditingToolbar .olControlModifyFeatureItemInactive { 
+  background-position: -1px 0px; 
+}
+.olControlEditingToolbar .olControlModifyFeatureItemActive { 
+  background-position: -1px -23px ;                                                                   
+}
 .olControlSaveFeaturesItemActive { 
     background-image: url(img/save_features_on.png);
     background-repeat: no-repeat;
@@ -312,6 +319,31 @@ div.olControlMousePosition {
   cursor: pointer;
 }
 
+.olFramedCloudPopupContent {
+    padding: 5px;
+    overflow: auto;
+}
+
 .olControlNoSelect {
  -moz-user-select: none;
+}
+
+/**
+ * Cursor styles
+ */
+
+.olCursorWait {
+    cursor: wait;
+}
+.olDragDown {
+    cursor: move;
+}
+.olDrawBox {
+    cursor: crosshair;
+}
+.olControlDragFeatureOver {
+    cursor: move;
+}
+.olControlDragFeatureActive.olControlDragFeatureOver.olDragDown {
+    cursor: -moz-grabbing;
 }

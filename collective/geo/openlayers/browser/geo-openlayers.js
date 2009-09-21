@@ -39,7 +39,7 @@ if (googlemaps) {
     var ibrida = new OpenLayers.Layer.Google(
         "Ibrida (Google)" , {type: G_HYBRID_MAP, 'sphericalMercator': true}
     );
-    map.addLayer(ibrida);    
+    map.addLayer(ibrida);
 }
 map.addControl(new OpenLayers.Control.LayerSwitcher());
 mousecontrol = new OpenLayers.Control.MousePosition(),

@@ -1,38 +1,40 @@
-<html metal:use-macro="here/main_template/macros/master">
-    <metal:block metal:fill-slot="javascript_head_slot">
+<html
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    metal:use-macro="here/main_template/macros/master">
 
-      <script type="text/javascript" src="./OpenLayers.js"></script>
-      <link href="++resource++openlayers.css" rel="stylesheet" type="text/css" />
+  <metal:block metal:fill-slot="javascript_head_slot">
 
-    </metal:block>
+    <script type="text/javascript" src="./OpenLayers.js"></script>
+    <link href="++resource++openlayers.css" rel="stylesheet" type="text/css" />
 
-<body>
+  </metal:block>
 
-<metal:main fill-slot="main">
+  <body>
 
-    <div>
+    <metal:main fill-slot="main">
+
+      <div>
         <h1 tal:content="context/Title"></h1>
         <metal:map use-macro="context/@@openlayers-macros/map" />
-      <script type="text/javascript">
-        <!--
+        <script type="text/javascript">
+          <!--
             var map = new OpenLayers.Map('map', {'maxResolution': 1.40625/2});
 
             mousecontrol = new OpenLayers.Control.MousePosition(),
             map.addControl(mousecontrol);
 
-            var ol_wms = new OpenLayers.Layer.WMS( "World Map", 
+            var ol_wms = new OpenLayers.Layer.WMS( "World Map",
               "http://labs.metacarta.com/wms-c/Basic.py?", {layers: 'basic', format: 'image/png' } );
 
             map.addLayers([ol_wms,]);
             map.addControl(new OpenLayers.Control.LayerSwitcher());
             map.zoomToExtent(new OpenLayers.Bounds(-102.56000,80.08000,107.45604,-6.64597));
+          // -->
+        </script>
+      </div>
 
-        // -->
+    </metal:main>
 
-      </script>
-    </div>
-
-</metal:main>
-
-</body>
+  </body>
 </html>
