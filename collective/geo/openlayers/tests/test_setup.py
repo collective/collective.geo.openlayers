@@ -7,11 +7,14 @@ from plone.browserlayer.layer import mark_layer
 
 class TestSetup(OpenlayersTestCase):
 
-   def afterSetUp(self):
+    def afterSetUp(self):
         super(TestSetup, self).afterSetUp()
-        # restrictedTraverse does not trigger BeforeTraverseEvent... so do it manually.
-        # TODO: would be better to access these resources with a real publishing request.
-        mark_layer(self.portal, BeforeTraverseEvent(self.portal, self.portal.REQUEST))
+        # restrictedTraverse does not trigger BeforeTraverseEvent...
+        #    so do it manually.
+        # TODO: would be better to access these resources with a full
+        #       publishing request.
+        mark_layer(self.portal, BeforeTraverseEvent(self.portal,
+                                                    self.portal.REQUEST))
 
     def test_portal_skins(self):
         skins = getToolByName(self.portal, 'portal_skins')
