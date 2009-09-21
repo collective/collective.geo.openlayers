@@ -22,7 +22,7 @@ class TestSetup(OpenlayersTestCase):
         skins = getToolByName(self.portal, 'portal_skins')
         layer = skins.getSkinPath('Plone Default')
         self.failUnless('geo_openlayers' in layer)
-	self.failUnless(skins['geo_openlayers'].hasObject('img'))
+        self.failUnless(skins['geo_openlayers'].hasObject('img'))
 
     def test_portal_skins_openlayers_theme_folder(self):
         skins = getToolByName(self.portal, 'portal_skins')
