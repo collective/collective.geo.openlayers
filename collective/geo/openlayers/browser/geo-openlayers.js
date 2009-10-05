@@ -10,7 +10,12 @@ var options = {
     numZoomLevels: 22,
     maxResolution: 156543.0339,
     maxExtent: new OpenLayers.Bounds(-20037508.34, -20037508.34,
-                                     20037508.34, 20037508.34)
+                                     20037508.34, 20037508.34),
+    controls: [new OpenLayers.Control.Navigation(), 
+               new OpenLayers.Control.PanZoom(),
+               new OpenLayers.Control.LayerSwitcher(),
+               new OpenLayers.Control.MousePosition()
+    ]
 };
 var map = new OpenLayers.Map('map', options);
 if (!googlemaps) {
@@ -41,9 +46,7 @@ if (googlemaps) {
     );
     map.addLayer(ibrida);    
 }
-map.addControl(new OpenLayers.Control.LayerSwitcher());
-mousecontrol = new OpenLayers.Control.MousePosition(),
-map.addControl(mousecontrol);
+
 map.setCenter(new OpenLayers.LonLat(lon,lat).transform(map.displayProjection, map.projection), zoom);
 
 function osm_getTileURL(bounds) {
