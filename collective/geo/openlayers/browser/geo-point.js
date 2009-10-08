@@ -30,12 +30,12 @@ OpenLayers.Control.Click = OpenLayers.Class(OpenLayers.Control, {
         // add a marker to map
         markers.addMarker(new OpenLayers.Marker(lonlat,icon));
         
-        // tranform to displayProjection: new OpenLayers.Projection("EPSG:4326")
+        // transform to displayProjection: new OpenLayers.Projection("EPSG:4326")
         lonlat.transform(map.projection, map.displayProjection);
 
-        // popolating the widgets
-        document.getElementById(latitude_widget_id).value = lonlat.lat;
+        // populating the widgets
         document.getElementById(longitude_widget_id).value = lonlat.lon;
+        document.getElementById(latitude_widget_id).value = lonlat.lat;
     }
 
 });
