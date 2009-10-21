@@ -31,4 +31,4 @@ Contributors
 
 * Giorgio Borelli - gborelli
 * Silvio Tomatis - silviot
-
+* David Breitkreutz - rockdj
