@@ -4,6 +4,10 @@ Changelog
 0.2 (unreleased)
 ----------------
 
+* Added ZCML registration for all skin subdirectories.  Without this,
+  elements like the Edit toolbar don't appear when Plone isn't running
+  in debug mode.
+  [rockdj]
 * Updated coordinate reference order to be consistent with WGS 1984 
   reference system.  This involves standardising the coordinate order
   to be [longitude, latitude] rather than [latitude, longitude].
