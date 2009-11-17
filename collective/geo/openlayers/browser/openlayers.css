@@ -7,6 +7,18 @@ div.olMap {
     cursor: default;
 }
 
+.olFramedCloudPopupContent dt, .olFramedCloudPopupContent dd { 
+margin: 0; 
+padding: 0; 
+line-height: normal;
+} 
+
+.olFramedCloudPopupContent dt { 
+float: left;
+margin-right: 0.5em;
+font-weight: bold;
+}
+
 div.olMapViewport {
     text-align: left;
 }
