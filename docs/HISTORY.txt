@@ -4,6 +4,13 @@ Changelog
 0.2 (unreleased)
 ----------------
 
+* Added CSS for definition lists within the framed cloud popups,
+  as used in collective.geo.kml
+  [rockdj] 
+* Added ZCML registration for all skin subdirectories.  Without this,
+  elements like the Edit toolbar don't appear when Plone isn't running
+  in debug mode.
+  [rockdj]
 * Updated OpenLayers.js to 2.8 (+styles and resources)
 * Register all browser pages and resources for IOpenLayers browser
   layer

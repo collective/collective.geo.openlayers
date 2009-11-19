@@ -1,8 +1,22 @@
+/*@import url(theme/default/style.css);*/
+
 div.olMap {
 	z-index: 0;
     padding: 0px!important;
     margin: 0px!important;
     cursor: default;
+}
+
+.olFramedCloudPopupContent dt, .olFramedCloudPopupContent dd { 
+margin: 0; 
+padding: 0; 
+line-height: normal;
+} 
+
+.olFramedCloudPopupContent dt { 
+float: left;
+margin-right: 0.5em;
+font-weight: bold;
 }
 
 div.olMapViewport {
@@ -357,3 +371,11 @@ div.olControlMousePosition {
 .olPopupContent h2 { margin: 0px; padding: 0px; }
 .olPopup p { margin:0px; font-size: .9em;}
 .olPopup h2 { font-size:1.2em; }
+
+
+
+/*  .chicken_contentDiv p {
+    height: 200px;
+    overflow: scroll;
+}*/
+
