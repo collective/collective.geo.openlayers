@@ -47,7 +47,7 @@ if (googlemaps) {
     map.addLayer(ibrida);
 }
 
-map.setCenter(new OpenLayers.LonLat(lon,lat).transform(map.displayProjection, map.projection), zoom);
+    map.setCenter(new OpenLayers.LonLat(lon,lat).transform(map.displayProjection, map.getProjectionObject()), zoom);
 
 function osm_getTileURL(bounds) {
     var res = this.map.getResolution();

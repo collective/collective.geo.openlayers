@@ -27,4 +27,9 @@
       file="geo-openlayers.js"
       layer=".interfaces.IOpenlayers" />
 
+  <browser:resource
+      name="proj4js.js"
+      file="proj4js-1.0.0.min.js"
+      layer=".interfaces.IOpenlayers" />
+
 </configure>
