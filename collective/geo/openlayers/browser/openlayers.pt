@@ -1,14 +1,18 @@
-<html
-    xmlns:metal="http://xml.zope.org/namespaces/metal"
-    xmlns:tal="http://xml.zope.org/namespaces/tal"
-    metal:use-macro="here/main_template/macros/master">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="here/main_template/macros/master">
 
-  <metal:block metal:fill-slot="javascript_head_slot">
+  <head>
+    <metal:block metal:fill-slot="css_slot">
+      <link href="++resource++openlayers.css" rel="stylesheet" type="text/css" />
+    </metal:block>
 
-    <script type="text/javascript" src="./OpenLayers.js"></script>
-    <link href="++resource++openlayers.css" rel="stylesheet" type="text/css" />
-
-  </metal:block>
+    <metal:block metal:fill-slot="javascript_head_slot">
+      <script type="text/javascript" src="./proj4js-compressed.js"></script>
+      <script type="text/javascript" src="./OpenLayers.js"></script>
+    </metal:block>
+  </head>
 
   <body>
 

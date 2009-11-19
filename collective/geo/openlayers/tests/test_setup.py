@@ -39,12 +39,20 @@ class TestSetup(OpenlayersTestCase):
         except KeyError:
             self.fail('marker.png image was not found')
 
-    def test_resource_geoopenlayers_js(self):
-        # bleach -- but to persist is diabolical
+    def test_portal_skins_theme_image(self):
         try:
-            self.portal.restrictedTraverse('++resource++geo-openlayers.js')
+            self.portal.restrictedTraverse('theme/default/img/ruler.png')
+        except KeyError:
+            self.fail('ruler.png in default theme not found')
+
+    def test_resource_js(self):
+        # bleach -- but to persist is diabolical
+        name = ''
+        try:
+            for name in ('geo-openlayers.js', 'proj4js.min.js'):
+                self.portal.restrictedTraverse('++resource++%s' % name)
         except AttributeError:
-            self.fail('geo-openlayers.js resource not found')
+            self.fail('%s resource not found' % name)
 
     def test_resource_openlayerscss(self):
         # bleach -- but to persist is diabolical
