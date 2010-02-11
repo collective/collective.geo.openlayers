@@ -11,7 +11,7 @@ def setup_product():
     """
        Set up the package and its dependencies.
     """
-    
+
     fiveconfigure.debug_mode = True
     import collective.geo.openlayers
     zcml.load_config('configure.zcml', collective.geo.openlayers)

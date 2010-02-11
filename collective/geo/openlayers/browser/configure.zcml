@@ -1,35 +1,35 @@
-<configure xmlns="http://namespaces.zope.org/zope"
-          xmlns:browser="http://namespaces.zope.org/browser"
-          xmlns:zope="http://namespaces.zope.org/zope"
-          xmlns:five="http://namespaces.zope.org/five">
- 
-    <browser:page
-                 name="openlayers"
-                 for="*"
-                 class=".openlayers.OpenLayers"
-                 template="openlayers.pt"
-                 permission = "zope2.View" />
+<configure 
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser" >
 
-    <browser:page
-        name="openlayers-macros"
-        for="*"
-        class=".openlayers.Macros"
-        permission="zope.Public" />
+  <browser:page
+      name="openlayers"
+      for="*"
+      class=".openlayers.OpenLayers"
+      template="openlayers.pt"
+      layer=".interfaces.IOpenlayers"
+      permission = "zope2.View" />
 
+  <browser:page
+      name="openlayers-macros"
+      for="*"
+      class=".openlayers.Macros"
+      layer=".interfaces.IOpenlayers"
+      permission="zope.Public" />
 
-    <browser:resource
-        name="openlayers.css"
-        file="openlayers.css"
-    />
+  <browser:resource
+      name="openlayers.css"
+      file="openlayers.css"
+      layer=".interfaces.IOpenlayers" />
 
-    <browser:resource
-        name="geo-point.js"
-        file="geo-point.js"
-    />
+  <browser:resource
+      name="geo-openlayers.js"
+      file="geo-openlayers.js"
+      layer=".interfaces.IOpenlayers" />
 
-    <browser:resource
-        name="geo-openlayers.js"
-        file="geo-openlayers.js"
-    />
-    
+  <browser:resource
+      name="proj4js.min.js"
+      file="proj4js-1.0.0.min.js"
+      layer=".interfaces.IOpenlayers" />
+
 </configure>

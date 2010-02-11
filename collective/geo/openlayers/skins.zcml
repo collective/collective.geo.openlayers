@@ -3,12 +3,7 @@
     xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="collective.geo.customtoolbars">
 
-    <cmf:registerDirectory
-                          name="geo_openlayers" />
-    <cmf:registerDirectory
-                          name="geo_openlayers/img" />
-    <cmf:registerDirectory
-                          name="geo_openlayers/theme" />
+  <cmf:registerDirectory name="geo_openlayers" recursive="true"/>
     <cmf:registerDirectory
                           name="geo_openlayers/theme/default" />
     <cmf:registerDirectory

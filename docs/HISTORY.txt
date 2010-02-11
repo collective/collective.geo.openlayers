@@ -11,6 +11,10 @@ Changelog
   elements like the Edit toolbar don't appear when Plone isn't running
   in debug mode.
   [rockdj]
+* Updated OpenLayers.js to 2.8 (+styles and resources)
+* Register all browser pages and resources for IOpenLayers browser
+  layer
+* Removed geo-point.js in favour of editing features provided by OpenLayers
 * Updated coordinate reference order to be consistent with WGS 1984 
   reference system.  This involves standardising the coordinate order
   to be [longitude, latitude] rather than [latitude, longitude].

@@ -44,10 +44,6 @@ Now, check to make sure the CSS files from OpenLayers are accessible. This cause
 
     >>> 'div.olMap' in browser.contents
     True
-
-    >>> loadUrl(portal.absolute_url()+'/theme/default/framedCloud.css')
-    True
-
     >>> 'olFramedCloudPopupContent' in browser.contents
     True
 

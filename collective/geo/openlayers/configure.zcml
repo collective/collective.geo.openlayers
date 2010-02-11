@@ -1,6 +1,5 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:five="http://namespaces.zope.org/five"
     i18n_domain="collective.geo.openlayers">
 
     <include package=".browser" />
