@@ -17,7 +17,7 @@ we start the tests with the usual boilerplate
     >>> browser.open(portal_url)
 
 the @@openlayers view must contain a div wrapper for a map
-    >>> view_url = '%s/@@openlayers' % portal_url
+    >>> view_url = '%s/@@openlayers_test' % portal_url
     >>> browser.open(view_url)
     >>> '<div id="map" ' in browser.contents
     True

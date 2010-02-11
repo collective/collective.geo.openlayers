@@ -3,10 +3,10 @@
     xmlns:browser="http://namespaces.zope.org/browser" >
 
   <browser:page
-      name="openlayers"
+      name="openlayers_test"
       for="*"
       class=".openlayers.OpenLayers"
-      template="openlayers.pt"
+      template="openlayers_test.pt"
       layer=".interfaces.IOpenlayers"
       permission = "zope2.View" />
 

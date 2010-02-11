@@ -4,6 +4,9 @@
       metal:use-macro="here/main_template/macros/master">
 
   <head>
+    <metal:block fill-slot="top_slot"
+          tal:define="dummy python:request.set('disable_border',1)" />
+
     <metal:block metal:fill-slot="css_slot">
       <link href="++resource++openlayers.css" rel="stylesheet" type="text/css" />
     </metal:block>
@@ -11,6 +14,26 @@
     <metal:block metal:fill-slot="javascript_head_slot">
       <script type="text/javascript" src="./proj4js-compressed.js"></script>
       <script type="text/javascript" src="./OpenLayers.js"></script>
+      <script type="text/javascript">
+        <!--
+          var map;
+          jq(window).load(function() {
+            map = new OpenLayers.Map('map');
+            var wms = new OpenLayers.Layer.WMS(
+                            "OpenLayers WMS",
+                            "http://labs.metacarta.com/wms/vmap0",
+                            {layers: 'basic'}
+                        );
+            map.addLayers([wms]);
+            mousecontrol = new OpenLayers.Control.MousePosition(),
+            map.addControl(mousecontrol);
+
+            map.setCenter(new OpenLayers.LonLat(0, 0), 1);
+
+          });
+        // -->
+      </script>
+
     </metal:block>
   </head>
 
@@ -21,21 +44,7 @@
       <div>
         <h1 tal:content="context/Title"></h1>
         <metal:map use-macro="context/@@openlayers-macros/map" />
-        <script type="text/javascript">
-          <!--
-            var map = new OpenLayers.Map('map', {'maxResolution': 1.40625/2});
 
-            mousecontrol = new OpenLayers.Control.MousePosition(),
-            map.addControl(mousecontrol);
-
-            var ol_wms = new OpenLayers.Layer.WMS( "World Map",
-              "http://labs.metacarta.com/wms-c/Basic.py?", {layers: 'basic', format: 'image/png' } );
-
-            map.addLayers([ol_wms,]);
-            map.addControl(new OpenLayers.Control.LayerSwitcher());
-            map.zoomToExtent(new OpenLayers.Bounds(-102.56000,80.08000,107.45604,-6.64597));
-          // -->
-        </script>
       </div>
 
     </metal:main>

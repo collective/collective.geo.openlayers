@@ -16,7 +16,6 @@ Alternatively, buildout users can install collective.geo.openlayers as part of a
         [buildout]
         ...
         eggs = 
-            zope.i18n>=3.4
             collective.geo.openlayers
         ...
         [instance]
@@ -32,3 +31,4 @@ Contributors
 * Giorgio Borelli - gborelli
 * Silvio Tomatis - silviot
 * David Breitkreutz - rockdj
+* Gerhard Weis - gweis
