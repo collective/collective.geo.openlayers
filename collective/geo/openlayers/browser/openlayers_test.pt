@@ -7,7 +7,7 @@
     <metal:block fill-slot="top_slot"
           tal:define="dummy python:request.set('disable_border',1)" />
 
-    <metal:block metal:fill-slot="css_slot">
+    <metal:block metal:fill-slot="style_slot">
       <link href="++resource++openlayers.css" rel="stylesheet" type="text/css" />
     </metal:block>
 

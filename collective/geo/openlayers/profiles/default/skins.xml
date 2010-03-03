@@ -5,7 +5,7 @@
           meta_type="Filesystem Directory View"
           directory="collective.geo.openlayers:skins/geo_openlayers"/>
 
-  <skin-path name="Plone Default">
+  <skin-path name="*">
     <layer name="geo_openlayers"
            insert-after="custom"/>
   </skin-path>
