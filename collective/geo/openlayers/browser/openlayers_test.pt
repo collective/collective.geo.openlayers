@@ -5,15 +5,12 @@
 
   <head>
     <metal:block fill-slot="top_slot"
-          tal:define="dummy python:request.set('disable_border',1)" />
-
-    <metal:block metal:fill-slot="style_slot">
-      <link href="++resource++openlayers.css" rel="stylesheet" type="text/css" />
-    </metal:block>
+          tal:define="dummy python:request.set('disable_border',1);
+                      portal_state context/@@plone_portal_state;
+                      portal_url portal_state/portal_url" />
 
     <metal:block metal:fill-slot="javascript_head_slot">
-      <script type="text/javascript" src="./proj4js-compressed.js"></script>
-      <script type="text/javascript" src="./OpenLayers.js"></script>
+      <script type="text/javascript" tal:attributes="src string:$portal_url/OpenLayers.js"></script>
       <script type="text/javascript">
         <!--
           var map;

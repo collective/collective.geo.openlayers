@@ -18,8 +18,8 @@
       permission="zope.Public" />
 
   <browser:resource
-      name="openlayers.css"
-      file="openlayers.css"
+      name="geo-openlayers.css"
+      file="geo-openlayers.css"
       layer=".interfaces.IOpenlayers" />
 
   <browser:resource

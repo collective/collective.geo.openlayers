@@ -3,7 +3,7 @@ Changelog
 
 0.2 (unreleased)
 ----------------
-
+* renamed cgeo-openlayers css and included in css registry [gborelli]
 * Added CSS for definition lists within the framed cloud popups,
   as used in collective.geo.kml
   [rockdj] 

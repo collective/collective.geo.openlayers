@@ -57,7 +57,7 @@ class TestSetup(OpenlayersTestCase):
     def test_resource_openlayerscss(self):
         # bleach -- but to persist is diabolical
         try:
-            self.portal.restrictedTraverse('++resource++openlayers.css')
+            self.portal.restrictedTraverse('++resource++geo-openlayers.css')
         except AttributeError:
             self.fail('openlayers.css resource not found')
 
