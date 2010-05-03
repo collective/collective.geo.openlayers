@@ -6,7 +6,4 @@
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="theme/default/google.css" media="screen" rel="stylesheet"
     rendering="import" insert-after="theme/default/style.css"/>
- <stylesheet title="" cacheable="True" compression="safe" cookable="True"
-       enabled="on" expression="" id="++resource++geo-openlayers.css" media="screen" rel="stylesheet"
-       rendering="import" insert-after="theme/default/google.css"/>
 </object>
