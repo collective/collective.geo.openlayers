@@ -13,7 +13,6 @@ we start the tests with the usual boilerplate
     >>> portal_url = self.portal.absolute_url()
     >>> self.portal.error_log._ignored_exceptions = ()
 
-    >>> from Products.PloneTestCase.setup import portal_owner, default_password
     >>> browser.open(portal_url)
 
 the @@openlayers view must contain a div wrapper for a map
