@@ -1,6 +1,6 @@
 /* drop down menus fix */
+.actionMenu.activated .actionMenuContent,
 #contentActionMenus dl.actionMenu.activated dd {z-index:1008}
-
 
 div.olMap {
     z-index: 0;
@@ -23,6 +23,7 @@ font-weight: bold;
 
 div.olMapViewport {
     text-align: left;
+    z-index: 0;
 }
 
 div.olLayerDiv {
