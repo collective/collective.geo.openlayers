@@ -48,12 +48,10 @@ class TestSetup(OpenlayersTestCase):
 
     def test_resource_js(self):
         # bleach -- but to persist is diabolical
-        name = ''
         try:
-            for name in ('geo-openlayers.js', 'proj4js.min.js'):
-                self.portal.restrictedTraverse('++resource++%s' % name)
+            self.portal.restrictedTraverse('++resource++proj4js.min.js')
         except AttributeError:
-            self.fail('%s resource not found' % name)
+            self.fail('++resource++proj4js.min.js resource not found')
 
     def test_resource_openlayerscss(self):
         # bleach -- but to persist is diabolical

@@ -22,10 +22,10 @@
       file="geo-openlayers.css"
       layer=".interfaces.IOpenlayers" />
 
-  <browser:resource
+  <!-- <browser:resource
       name="geo-openlayers.js"
       file="geo-openlayers.js"
-      layer=".interfaces.IOpenlayers" />
+      layer=".interfaces.IOpenlayers" /> -->
 
   <browser:resource
       name="proj4js.min.js"
