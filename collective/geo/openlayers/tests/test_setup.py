@@ -5,6 +5,7 @@ from Products.CMFPlone.utils import getToolByName
 from zope.app.publication.interfaces import BeforeTraverseEvent
 from plone.browserlayer.layer import mark_layer
 
+
 class TestSetup(OpenlayersTestCase):
 
     def afterSetUp(self):
@@ -60,6 +61,7 @@ class TestSetup(OpenlayersTestCase):
             self.portal.restrictedTraverse('++resource++geo-openlayers.css')
         except AttributeError:
             self.fail('openlayers.css resource not found')
+
 
 def test_suite():
     suite = unittest.TestSuite()
