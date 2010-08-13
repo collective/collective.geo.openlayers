@@ -18,6 +18,7 @@ div.olMapViewport {
  z-index: 0;
 }
 
+.olLayerGooglePoweredBy {z-index: 1001!important}
 
 /*.olControlEditingToolbar .olControlModifyFeatureItemInactive {
   background-position: -1px 0px;
