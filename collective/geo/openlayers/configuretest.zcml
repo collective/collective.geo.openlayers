@@ -1,0 +1,16 @@
+<configure 
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser" >
+
+  <include file="configure.zcml" />
+
+  <!-- Openlayers Test view -->
+  <browser:page
+      name="openlayers_test"
+      for="*"
+      template="browser/openlayers_test.pt"
+      layer=".browser.interfaces.IOpenlayers"
+      permission = "zope2.View" /> 
+
+</configure>

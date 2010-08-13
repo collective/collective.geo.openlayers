@@ -24,17 +24,12 @@ div.olMapViewport {
 
 .olLayerGooglePoweredBy {z-index: 700!important}
 
-#map {
-    width: 100%;
-    height: 500px;
-    border: 1px solid black;
-    position: relative;
-}
+.olControlAttribution {bottom:13px}
+
 .olPopupContent h2 { margin: 0px; padding: 0px; }
 .olPopup p { margin:0px; font-size: .9em;}
 .olPopup h2 { font-size:1.2em; }
 
-#map {width: 100%; height: 500px}
 
 /* sunbrust theme fix */
 div.olMap img {max-width:none !important}

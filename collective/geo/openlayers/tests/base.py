@@ -13,11 +13,10 @@ def setup_product():
 
     fiveconfigure.debug_mode = True
     import collective.geo.openlayers
-    zcml.load_config('configure.zcml', collective.geo.openlayers)
+    zcml.load_config('configuretest.zcml', collective.geo.openlayers)
 
     fiveconfigure.debug_mode = False
 
-    #ztc.installPackage('collective.geo.openlayers')
 
 setup_product()
 ptc.setupPloneSite(products=['collective.geo.openlayers'])

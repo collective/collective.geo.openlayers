@@ -2,30 +2,18 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser" >
 
-  <browser:page
+  <!-- Openlayers Test view -->
+  <!-- browser:page
       name="openlayers_test"
       for="*"
-      class=".openlayers.OpenLayers"
       template="openlayers_test.pt"
       layer=".interfaces.IOpenlayers"
-      permission = "zope2.View" />
-
-  <browser:page
-      name="openlayers-macros"
-      for="*"
-      class=".openlayers.Macros"
-      layer=".interfaces.IOpenlayers"
-      permission="zope.Public" />
+      permission = "zope2.View" / --> 
 
   <browser:resource
       name="geo-openlayers.css"
       file="geo-openlayers.css"
       layer=".interfaces.IOpenlayers" />
-
-  <!-- <browser:resource
-      name="geo-openlayers.js"
-      file="geo-openlayers.js"
-      layer=".interfaces.IOpenlayers" /> -->
 
   <browser:resource
       name="proj4js.min.js"
