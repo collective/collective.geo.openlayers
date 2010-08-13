@@ -1,55 +1,17 @@
 /* drop down menus fix */
 .actionMenu.activated .actionMenuContent,
-#contentActionMenus dl.actionMenu.activated dd {z-index:1008}
-
-dl.placemark-properties dt {
-    float: none;
-}
-
-.olFramedCloudPopupContent dt, .olFramedCloudPopupContent dd { 
- margin: 0; 
- padding: 0; 
- line-height: normal;
-} 
-
-.olFramedCloudPopupContent dt { 
- float: left;
- margin-right: 0.5em;
- font-weight: bold;
-}
-
-div.olMapViewport {
- z-index: 0;
-}
-
-.olLayerGooglePoweredBy {z-index: 700!important}
-
-.olControlAttribution {bottom:13px}
-
-.olPopupContent h2 { margin: 0px; padding: 0px; }
-.olPopup p { margin:0px; font-size: .9em;}
-.olPopup h2 { font-size:1.2em; }
-
-
+#contentActionMenus dl.actionMenu.activated dd{z-index:1008}
 /* sunbrust theme fix */
 div.olMap img {max-width:none !important}
-
-
-
-/*.olControlEditingToolbar .olControlModifyFeatureItemInactive {
-  background-position: -1px 0px;
-}
-.olControlEditingToolbar .olControlModifyFeatureItemActive {
-  background-position: -1px -23px ;
-}
-.olControlSaveFeaturesItemActive {
-    background-image: url(img/save_features_on.png);
-    background-repeat: no-repeat;
-    background-position: 0px 1px;
-}
-.olControlSaveFeaturesItemInactive {
-    background-image: url(img/save_features_off.png);
-    background-repeat: no-repeat;
-    background-position: 0px 1px;
-}
-*/
+dl.placemark-properties dt{float:none}
+.olFramedCloudPopupContent dt, .olFramedCloudPopupContent dd{margin:0;padding:0;line-height:normal} 
+.olFramedCloudPopupContent dt{float:left;margin-right:.5em;font-weight:bold}
+div.olMapViewport{z-index: 0}
+.olLayerGooglePoweredBy{z-index: 700!important}
+.olControlAttribution{bottom:13px}
+.olPopupContent h2{ margin: 0;padding: 0}
+.olPopup p{margin:0;font-size: .9em}
+.olPopup h2{font-size:1.2em}
+/* collective geo default map styles */
+#default-cgmap, #geosettings-cgmap {height:450px}
+#geoshapemap {height:500px;}
