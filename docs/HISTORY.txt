@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.3 (unreleased)
+----------------
+
+- Nothing changed yet.
+
+
 0.2 (2010-10-31)
 ----------------
 * renamed cgeo-openlayers css and included in css registry [gborelli]
