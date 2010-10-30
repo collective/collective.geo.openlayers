@@ -5,13 +5,11 @@ collective.geo.openlayers enables openlayers machinery into Plone.
 
 Requirements
 ------------
-* plone >= 3.2.1
+* Plone >= 4.0
 
 Installation
 ============
-Just a simple easy_install collective.geo.openlayers is enough.
-
-Alternatively, buildout users can install collective.geo.openlayers as part of a specific project's buildout, by having a buildout configuration such as: ::
+You can install collective.geo.openlayers as part of a specific project's buildout, by having a buildout configuration such as: ::
 
         [buildout]
         ...
