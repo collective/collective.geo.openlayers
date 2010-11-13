@@ -1,10 +1,10 @@
 Changelog
 =========
 
-0.3 (unreleased)
-----------------
+0.2.1 (2010-11-13)
+------------------
 
-- Nothing changed yet.
+- Updated Openlayers to 2.10 version
 
 
 0.2 (2010-10-31)

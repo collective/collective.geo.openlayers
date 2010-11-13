@@ -15,6 +15,7 @@ div.olMapViewport{z-index: 0}
 /* collective geo default map styles */
 #default-cgmap, #geosettings-cgmap {height:450px}
 #geoshapemap {height:500px;}
+#location-options li a {cursor: pointer}
 #location-options li.selected a {color: red!important}
 /* openlayers style fix */
 .olControlModifyFeatureItemActive {background-position:-1px -23px}
