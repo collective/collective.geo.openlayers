@@ -4,7 +4,7 @@ Changelog
 0.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- fixed css registry entries [gborelli]
 
 
 0.2.1 (2010-11-13)

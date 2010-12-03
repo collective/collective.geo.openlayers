@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <object name="portal_css">
-  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+ <stylesheet title="" cacheable="True" applyPrefix="True" compression="safe" cookable="True"
        enabled="on" expression="" id="theme/default/style.css" media="screen" rel="stylesheet"
        rendering="import" />
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="theme/default/google.css" media="screen" rel="stylesheet"
     rendering="import" insert-after="theme/default/style.css"/>
- <stylesheet title="" cacheable="True" compression="safe" cookable="True"
-    enabled="on" expression="" id="++resource++geo-openlayers.css" media="screen" rel="stylesheet"
-    rendering="import" insert-after="theme/default/style.css"/>
-
+ <stylesheet title="" applyPrefix="True" authenticated="False"
+    cacheable="True" compression="safe" conditionalcomment="" cookable="True"
+    enabled="on" expression="" id="++resource++geo-openlayers.css"
+    media="screen" rel="stylesheet" rendering="import"
+    insert-after="theme/default/style.css" />
 </object>
