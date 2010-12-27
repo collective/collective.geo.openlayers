@@ -9,8 +9,17 @@
                       portal_state context/@@plone_portal_state;
                       portal_url portal_state/portal_url" />
 
+    <metal:block metal:fill-slot="css_head_slot">
+      #map {
+          width: 100%;
+          height: 500px;
+          border: 1px solid black;
+          position: relative}
+    </metal:block>
+
     <metal:block metal:fill-slot="javascript_head_slot">
-      <script type="text/javascript" tal:attributes="src string:$portal_url/OpenLayers.js"></script>
+      <script type="text/javascript"
+          tal:attributes="src string:$portal_url/OpenLayers.js"></script>
       <script type="text/javascript">
         <!--
           var map;
@@ -37,9 +46,7 @@
     <metal:main fill-slot="main">
       <div>
         <h1 tal:content="context/Title"></h1>
-        <div id="map" class="olMap"
-            style="width: 100%; height: 500px; border: 1px solid black; position: relative;"
-          ><!-- openlayers map --></div>
+        <div id="map" class="olMap"><!-- openlayers map --></div>
       </div>
     </metal:main>
   </body>
