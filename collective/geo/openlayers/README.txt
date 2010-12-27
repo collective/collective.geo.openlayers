@@ -1,12 +1,6 @@
-collective.geo.openlayers
-=========================
+How it work
+-----------
 
-Overview
---------
-collective.geo.openlayers include openlayers project into Plone.
-
-Tests
------
 we start the tests with the usual boilerplate
     >>> from Products.Five.testbrowser import Browser
     >>> browser = Browser()
