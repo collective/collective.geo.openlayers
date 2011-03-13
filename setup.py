@@ -30,5 +30,7 @@ setup(name='collective.geo.openlayers',
       ],
       entry_points="""
       # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )

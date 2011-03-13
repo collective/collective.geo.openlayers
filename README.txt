@@ -11,7 +11,7 @@ collective.geo.openlayers enables openlayers machinery into Plone.
 
 Requirements
 ------------
-* Plone >= 4.0
+* Plone >= 3
 
 Installation
 ------------
@@ -22,10 +22,6 @@ You can install collective.geo.openlayers as part of a specific project's buildo
         eggs = 
             collective.geo.openlayers
         ...
-        [instance]
-        ...
-        zcml = 
-            collective.geo.openlayers
 
 Install this product from the Plone control panel.
 
