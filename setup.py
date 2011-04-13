@@ -28,6 +28,10 @@ setup(name='collective.geo.openlayers',
           'setuptools',
           # -*- Extra requirements: -*-
       ],
+      extras_require = {
+        'test': [
+            'Products.PloneTestCase']
+      },
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]

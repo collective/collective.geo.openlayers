@@ -4,7 +4,9 @@ Changelog
 0.2.3 (unreleased)
 ------------------
 
-- added z3c.autoinclude entry point
+- changed Browser import from Testing.testbrowser [gborelli]
+- added extra_requires in setup.py for test [gborelli]
+- added z3c.autoinclude entry point [gborelli]
 
 
 0.2.2 (2010-12-28)
