@@ -26,12 +26,9 @@ setup(name='collective.geo.openlayers',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'Plone',
           # -*- Extra requirements: -*-
       ],
-      extras_require = {
-        'test': [
-            'Products.PloneTestCase']
-      },
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]
