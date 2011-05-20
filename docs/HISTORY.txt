@@ -4,8 +4,8 @@ Changelog
 0.2.3 (unreleased)
 ------------------
 
+- plone 4.1 fixes [gborelli]
 - changed Browser import from Testing.testbrowser [gborelli]
-- added extra_requires in setup.py for test [gborelli]
 - added z3c.autoinclude entry point [gborelli]
 
 
