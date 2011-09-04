@@ -4,6 +4,7 @@ Changelog
 0.2.3 (unreleased)
 ------------------
 
+- added integration example in readme file [gborelli] 
 - plone 4.1 fixes [gborelli]
 - changed Browser import from Testing.testbrowser [gborelli]
 - added z3c.autoinclude entry point [gborelli]
@@ -24,6 +25,7 @@ Changelog
 0.2 (2010-10-31)
 ----------------
 * renamed cgeo-openlayers css and included in css registry [gborelli]
+* removed openlayers-macros [gborelli]
 * Added CSS for definition lists within the framed cloud popups,
   as used in collective.geo.kml
   [rockdj] 
