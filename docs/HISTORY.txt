@@ -4,7 +4,7 @@ Changelog
 0.2.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Updated Openlayers to 2.11 version
 
 
 0.2.3 (2011-09-05)
