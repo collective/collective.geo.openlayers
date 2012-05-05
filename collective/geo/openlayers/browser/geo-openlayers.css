@@ -4,7 +4,7 @@
 /* sunbrust theme fix */
 div.olMap img {max-width:none !important}
 dl.placemark-properties dt{float:none}
-.olFramedCloudPopupContent dt, .olFramedCloudPopupContent dd{margin:0;padding:0;line-height:normal} 
+.olFramedCloudPopupContent dt, .olFramedCloudPopupContent dd{margin:0;padding:0;line-height:normal}
 .olFramedCloudPopupContent dt{float:left;margin-right:.5em;font-weight:bold}
 div.olMapViewport{z-index: 0}
 .olLayerGooglePoweredBy{z-index: 700!important}
@@ -20,3 +20,22 @@ div.olMapViewport{z-index: 0}
 /* openlayers style fix */
 .olControlModifyFeatureItemActive {background-position:-1px -23px}
 .olControlModifyFeatureItemInactive {background-position:-1px 0px}
+
+/* XXX: Move to other package */
+#coordinates-form #formfield-form-widgets-map_viewlet_position,
+#formfield-form-widgets-imgpath,#formfield-form-widgets-map_width,#formfield-form-widgets-map_height,#formfield-form-widgets-display_properties {clear:none;float:right;width:47%}
+#formfield-form-widgets-marker_image,#formfield-form-widgets-marker_image_size,#formfield-form-widgets-linecolor,#formfield-form-widgets-polygoncolor,#formfield-form-widgets-linewidth {clear:left;float:left;width:47%}
+#map-form-wrapper {
+    border: 1px solid #dddddd;
+    border-top: 0;
+    height: 550px;
+}
+#formfield-form-widgets-use_custom_styles {
+    border: 1px solid #999966;
+    border-radius: 10px;
+    background-color: #FFFFE3;
+    padding: 6px 20px
+}
+#form-buttons-remove-georeference {
+    float: right;
+}
