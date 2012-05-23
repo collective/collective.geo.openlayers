@@ -80,5 +80,5 @@ Contributors
 
 * Giorgio Borelli - gborelli
 * Silvio Tomatis - silviot
-* David Breitkreutz - rockdj
+* David Beitey - davidjb
 * Gerhard Weis - gweis
