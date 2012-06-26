@@ -10,6 +10,7 @@ div.olMapViewport{z-index: 0}
 .olLayerGooglePoweredBy{z-index: 700!important}
 .olControlAttribution{bottom:13px}
 .olPopupContent h2{ margin: 0;padding: 0}
+.olPopup {width:40%;}
 .olPopup p{margin:0;font-size: .9em}
 .olPopup h2{font-size:1.2em}
 /* collective geo default map styles */
