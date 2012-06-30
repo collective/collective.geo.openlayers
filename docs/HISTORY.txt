@@ -4,6 +4,8 @@ Changelog
 2.5 (unreleased)
 ------------------
 
+- Updated OpenLayers to version 2.12.
+  [davidjb]
 - Encourage OpenLayers to shorten popup widths via CSS. Long marker
   headings (eg content titles) would cause popups to fill the map.
   [davidjb]
