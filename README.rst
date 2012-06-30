@@ -74,6 +74,31 @@ You can include openlayers in a Plone browser page in this way
           </body>
         </html>
 
+Updating this package
+---------------------
+
+When a new version of OpenLayers is released, this package can be updated
+accordingly using the following steps, keeping in mind that some paths and URLs
+will need adjustment::
+
+    cd ~/collective.geo.openlayers
+    cd collective/geo/openlayers/skins/
+    #Change URL accordingly
+    wget http://openlayers.org/download/OpenLayers-2.12.tar.gz
+    tar xf OpenLayers*.tar.gz
+    mv OpenLayers-2.12 OpenLayers
+    #Maintain 3rd party files
+    mv geo_openlayers/plone3_fix_form_tabbing.js geo_openlayers/proj4js-compressed.js .
+    git rm geo_openlayers/* -r
+    mkdir geo_openlayers
+    #Only select the files we need
+    mv OpenLayers/{*.js,*.txt,*.md,img,theme} geo_openlayers/
+    mv *.js geo_openlayers/
+    git add geo_openlayers/
+
+    #Edit change note now in history
+    vim ~/collective.geo.openlayers/docs/HISTROY.txt
+    git commit -a -m "Updated to OpenLayers [version]"
 
 Contributors
 ------------
