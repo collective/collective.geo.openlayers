@@ -4,7 +4,9 @@ Changelog
 2.5 (unreleased)
 ------------------
 
-- Updated OpenLayers to version 2.12.
+- Updated OpenLayers to version 2.12. ``deprecated.js`` is available
+  in this package for deprecated elements as per
+  https://github.com/openlayers/openlayers/blob/master/notes/2.12.md#deprecated-components
   [davidjb]
 - Encourage OpenLayers to shorten popup widths via CSS. Long marker
   headings (eg content titles) would cause popups to fill the map.
