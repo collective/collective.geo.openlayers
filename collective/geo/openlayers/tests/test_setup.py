@@ -34,6 +34,12 @@ class TestSetup(OpenlayersTestCase):
         self.failUnless('geo_openlayers' in layer)
         self.failUnless(skins['geo_openlayers'].hasObject('theme'))
 
+    def test_portal_skins_openlayers_theme_folder(self):
+        skins = getToolByName(self.portal, 'portal_skins')
+        layer = skins.getSkinPath('Plone Default')
+        self.failUnless('geo_openlayers' in layer)
+        self.failUnless(skins['geo_openlayers'].hasObject('lang'))
+
     def test_portal_skins_marker_image(self):
         try:
             self.portal.restrictedTraverse('img/marker.png')
@@ -45,6 +51,12 @@ class TestSetup(OpenlayersTestCase):
             self.portal.restrictedTraverse('theme/default/img/ruler.png')
         except KeyError:
             self.fail('ruler.png in default theme not found')
+
+    def test_portal_skins_translations(self):
+        try:
+            self.portal.restrictedTraverse('lang/de.js')
+        except KeyError:
+            self.fail('OpenLayers translation files not found (tried German)')
 
     def test_resource_js(self):
         # bleach -- but to persist is diabolical

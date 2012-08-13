@@ -46,6 +46,13 @@ You can include openlayers in a Plone browser page in this way
               <script type="text/javascript"
                   tal:attributes="src string:$portal_url/OpenLayers.js"></script>
 
+              <!-- optional openlayers translation -->
+              <script type="text/javascript"
+                  tal:attributes="src string:$portal_url/lang/de.js"></script>
+              <script type="text/javascript">
+                  OpenLayers.Lang.setCode('de');
+              </script>
+
               <script type="text/javascript">
                   jq(window).bind('load', function() {
                      map = new OpenLayers.Map( 'map');
@@ -95,6 +102,8 @@ will need adjustment::
     mv OpenLayers/{*.js,*.txt,*.md,img,theme} geo_openlayers/
     mv *.js geo_openlayers/
     git add geo_openlayers/
+    #Copy the translation files
+    mv OpenLayers/lib/OpenLayers/Lang/*.js geo_openlayers/lang/
 
     #Edit change note now in history
     vim ~/collective.geo.openlayers/docs/HISTROY.txt
@@ -107,3 +116,4 @@ Contributors
 * Silvio Tomatis - silviot
 * David Beitey - davidjb
 * Gerhard Weis - gweis
+* Denis Krienbühl - href

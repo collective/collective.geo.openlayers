@@ -1,5 +1,5 @@
-How it work
------------
+How it works
+------------
 
 we start the tests with the usual boilerplate
     >>> from Testing.testbrowser import Browser
@@ -52,3 +52,8 @@ Check to make sure we can access a given image from OpenLayers
     True
 
     >>> browser.open(view_url)
+
+Ensure that the translation files can be accessed
+
+    >>> loadUrl(portal.absolute_url()+'/lang/de.js')
+    True

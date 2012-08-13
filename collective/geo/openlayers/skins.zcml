@@ -8,5 +8,7 @@
                           name="geo_openlayers/theme/default" />
     <cmf:registerDirectory
                           name="geo_openlayers/theme/default/img" />
+    <cmf:registerDirectory
+                          name="geo_openlayers/lang" />
 
 </configure>
