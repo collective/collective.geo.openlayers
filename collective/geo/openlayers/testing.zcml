@@ -1,4 +1,4 @@
-<configure 
+<configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:browser="http://namespaces.zope.org/browser" >
@@ -9,8 +9,8 @@
   <browser:page
       name="openlayers_test"
       for="*"
-      template="browser/openlayers_test.pt"
+      template="tests/openlayers_test.pt"
       layer=".browser.interfaces.IOpenlayers"
-      permission = "zope2.View" /> 
+      permission="zope2.View" />
 
 </configure>

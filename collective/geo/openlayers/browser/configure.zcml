@@ -1,14 +1,6 @@
-<configure 
+<configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser" >
-
-  <!-- Openlayers Test view -->
-  <!-- browser:page
-      name="openlayers_test"
-      for="*"
-      template="openlayers_test.pt"
-      layer=".interfaces.IOpenlayers"
-      permission = "zope2.View" / --> 
 
   <browser:resource
       name="geo-openlayers.css"
