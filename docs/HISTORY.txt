@@ -4,6 +4,7 @@ Changelog
 2.5 (unreleased)
 ------------------
 
+- refactored tests in order to use plone.app.testing and unittest2 [gborelli]
 - Updated OpenLayers to version 2.12. ``deprecated.js`` is available
   in this package for deprecated elements as per
   https://github.com/openlayers/openlayers/blob/master/notes/2.12.md#deprecated-components
@@ -23,7 +24,7 @@ Changelog
 0.2.3 (2011-09-05)
 ------------------
 
-- added integration example in readme file [gborelli] 
+- added integration example in readme file [gborelli]
 - plone 4.1 fixes [gborelli]
 - changed Browser import from Testing.testbrowser [gborelli]
 - added z3c.autoinclude entry point [gborelli]
@@ -47,7 +48,7 @@ Changelog
 * removed openlayers-macros [gborelli]
 * Added CSS for definition lists within the framed cloud popups,
   as used in collective.geo.kml
-  [rockdj] 
+  [rockdj]
 * Added ZCML registration for all skin subdirectories.  Without this,
   elements like the Edit toolbar don't appear when Plone isn't running
   in debug mode.
@@ -56,17 +57,17 @@ Changelog
 * Register all browser pages and resources for IOpenLayers browser
   layer
 * Removed geo-point.js in favour of editing features provided by OpenLayers
-* Updated coordinate reference order to be consistent with WGS 1984 
+* Updated coordinate reference order to be consistent with WGS 1984
   reference system.  This involves standardising the coordinate order
   to be [longitude, latitude] rather than [latitude, longitude].
   [rockdj]
-* Gave the Map element a relative position via CSS to allow Plone 
-  drop-down menus to appear over the top (z-index doesn't apply 
+* Gave the Map element a relative position via CSS to allow Plone
+  drop-down menus to appear over the top (z-index doesn't apply
   unless position is specified).
   [rockdj]
 * Added ZCML registration for 'img' and 'theme' skin subdirectories.
-  Without registration, these folders are unable to be seen in Plone 
-  and the OpenLayers controls don't appear. 
+  Without registration, these folders are unable to be seen in Plone
+  and the OpenLayers controls don't appear.
   [rockdj]
 * Added unit tests to ensure skin subdirectory registration works.
   [rockdj]

@@ -2,10 +2,11 @@ How it works
 ------------
 
 we start the tests with the usual boilerplate
-    >>> from Testing.testbrowser import Browser
-    >>> browser = Browser()
-    >>> portal_url = self.portal.absolute_url()
-    >>> self.portal.error_log._ignored_exceptions = ()
+    >>> from plone.testing.z2 import Browser
+    >>> browser = Browser(layer['app'])
+    >>> portal = layer['portal']
+    >>> portal_url = portal.absolute_url()
+    >>> portal.error_log._ignored_exceptions = ()
 
     >>> browser.open(portal_url)
 
@@ -57,3 +58,4 @@ Ensure that the translation files can be accessed
 
     >>> loadUrl(portal.absolute_url()+'/lang/de.js')
     True
+

@@ -8,7 +8,6 @@ setup(name='collective.geo.openlayers',
       description="openlayers support for Plone",
       long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
-      # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
         "Topic :: Internet",
@@ -29,6 +28,11 @@ setup(name='collective.geo.openlayers',
           'Plone',
           # -*- Extra requirements: -*-
       ],
+      extras_require={
+        'test': [
+            'plone.app.testing',
+        ],
+      },
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]

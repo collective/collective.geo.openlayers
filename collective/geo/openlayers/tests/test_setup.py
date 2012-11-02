@@ -1,44 +1,41 @@
-import unittest
-from collective.geo.openlayers.tests.base import OpenlayersTestCase
-from Products.CMFPlone.utils import getToolByName
+# -*- coding: utf-8 -*-
+import unittest2 as unittest
+from zope.interface import directlyProvides
+from Products.CMFCore.utils import getToolByName
 
-from zope.app.publication.interfaces import BeforeTraverseEvent
-from plone.browserlayer.layer import mark_layer
+from ..browser.interfaces import IOpenlayers
+from ..testing import CGEO_OPENLAYERS_FUNCTIONAL
 
 
-class TestSetup(OpenlayersTestCase):
+class TestSetup(unittest.TestCase):
+    layer = CGEO_OPENLAYERS_FUNCTIONAL
 
-    def afterSetUp(self):
-        super(TestSetup, self).afterSetUp()
-        # restrictedTraverse does not trigger BeforeTraverseEvent...
-        #    so do it manually.
-        # TODO: would be better to access these resources with a full
-        #       publishing request.
-        mark_layer(self.portal, BeforeTraverseEvent(self.portal,
-                                                    self.portal.REQUEST))
+    def setUp(self):
+        self.portal = self.layer['portal']
+        self.cat = getToolByName(self.layer['portal'], 'portal_catalog')
+
+        self.request = self.layer['request']
+        # marking the request with BrowserLayer
+        directlyProvides(self.request, IOpenlayers)
+
+    def get_resource(self, name):
+        return self.portal.restrictedTraverse(
+            name, None
+        )
 
     def test_portal_skins(self):
         skins = getToolByName(self.portal, 'portal_skins')
         layer = skins.getSkinPath('Plone Default')
-        self.failUnless('geo_openlayers' in layer)
+        self.assertIn('geo_openlayers', layer)
 
     def test_portal_skins_openlayers_images_folder(self):
         skins = getToolByName(self.portal, 'portal_skins')
-        layer = skins.getSkinPath('Plone Default')
-        self.failUnless('geo_openlayers' in layer)
-        self.failUnless(skins['geo_openlayers'].hasObject('img'))
+        self.assertIsNotNone(skins['geo_openlayers'].hasObject('img'))
 
     def test_portal_skins_openlayers_theme_folder(self):
         skins = getToolByName(self.portal, 'portal_skins')
-        layer = skins.getSkinPath('Plone Default')
-        self.failUnless('geo_openlayers' in layer)
-        self.failUnless(skins['geo_openlayers'].hasObject('theme'))
-
-    def test_portal_skins_openlayers_theme_folder(self):
-        skins = getToolByName(self.portal, 'portal_skins')
-        layer = skins.getSkinPath('Plone Default')
-        self.failUnless('geo_openlayers' in layer)
-        self.failUnless(skins['geo_openlayers'].hasObject('lang'))
+        self.assertIsNotNone(skins['geo_openlayers'].hasObject('theme'))
+        self.assertIsNotNone(skins['geo_openlayers'].hasObject('lang'))
 
     def test_portal_skins_marker_image(self):
         try:
@@ -47,33 +44,56 @@ class TestSetup(OpenlayersTestCase):
             self.fail('marker.png image was not found')
 
     def test_portal_skins_theme_image(self):
-        try:
-            self.portal.restrictedTraverse('theme/default/img/ruler.png')
-        except KeyError:
-            self.fail('ruler.png in default theme not found')
+        self.assertIsNotNone(
+            self.get_resource('theme/default/img/ruler.png')
+        )
 
     def test_portal_skins_translations(self):
-        try:
-            self.portal.restrictedTraverse('lang/de.js')
-        except KeyError:
-            self.fail('OpenLayers translation files not found (tried German)')
+        self.assertIsNotNone(
+            self.get_resource('lang/de.js')
+        )
 
     def test_resource_js(self):
-        # bleach -- but to persist is diabolical
-        try:
-            self.portal.restrictedTraverse('++resource++proj4js.min.js')
-        except AttributeError:
-            self.fail('++resource++proj4js.min.js resource not found')
+        self.assertIsNotNone(
+            self.get_resource('++resource++proj4js.min.js')
+        )
 
     def test_resource_openlayerscss(self):
-        # bleach -- but to persist is diabolical
-        try:
-            self.portal.restrictedTraverse('++resource++geo-openlayers.css')
-        except AttributeError:
-            self.fail('openlayers.css resource not found')
+        self.assertIsNotNone(
+            self.get_resource('++resource++geo-openlayers.css')
+        )
 
 
 def test_suite():
     suite = unittest.TestSuite()
     suite.addTest(unittest.makeSuite(TestSetup))
     return suite
+
+
+# import unittest
+# from collective.geo.openlayers.tests.base import OpenlayersTestCase
+# from Products.CMFPlone.utils import getToolByName
+
+# from zope.app.publication.interfaces import BeforeTraverseEvent
+# from plone.browserlayer.layer import mark_layer
+
+
+# class TestSetup(OpenlayersTestCase):
+
+#     def afterSetUp(self):
+#         super(TestSetup, self).afterSetUp()
+#         # restrictedTraverse does not trigger BeforeTraverseEvent...
+#         #    so do it manually.
+#         # TODO: would be better to access these resources with a full
+#         #       publishing request.
+#         mark_layer(self.portal, BeforeTraverseEvent(self.portal,
+#                                                     self.portal.REQUEST))
+
+
+
+
+
+# def test_suite():
+#     suite = unittest.TestSuite()
+#     suite.addTest(unittest.makeSuite(TestSetup))
+#     return suite
