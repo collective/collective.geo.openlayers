@@ -4,11 +4,11 @@ from zope.interface import directlyProvides
 from Products.CMFCore.utils import getToolByName
 
 from ..browser.interfaces import IOpenlayers
-from ..testing import CGEO_OPENLAYERS_FUNCTIONAL
+from ..testing import CGEO_OPENLAYERS_INTEGRATION
 
 
 class TestSetup(unittest.TestCase):
-    layer = CGEO_OPENLAYERS_FUNCTIONAL
+    layer = CGEO_OPENLAYERS_INTEGRATION
 
     def setUp(self):
         self.portal = self.layer['portal']
