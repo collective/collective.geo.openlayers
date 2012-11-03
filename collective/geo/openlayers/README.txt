@@ -8,7 +8,6 @@ we start the tests with the usual boilerplate
     >>> portal_url = portal.absolute_url()
     >>> portal.error_log._ignored_exceptions = ()
 
-    >>> browser.open(portal_url)
 
 the @@openlayers view must contain a div wrapper for a map
     >>> view_url = '%s/@@openlayers_test' % portal_url

@@ -25,7 +25,7 @@ setup(name='collective.geo.openlayers',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'Plone',
+          'Products.CMFCore',
           # -*- Extra requirements: -*-
       ],
       extras_require={

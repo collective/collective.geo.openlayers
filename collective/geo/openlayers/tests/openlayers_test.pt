@@ -2,7 +2,6 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       metal:use-macro="here/main_template/macros/master">
-
   <head>
     <metal:block fill-slot="top_slot"
           tal:define="dummy python:request.set('disable_border',1);
