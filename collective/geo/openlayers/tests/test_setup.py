@@ -32,7 +32,7 @@ class TestSetup(unittest.TestCase):
         skins = getToolByName(self.portal, 'portal_skins')
         self.assertIsNotNone(skins['geo_openlayers'].hasObject('img'))
 
-    def test_portal_skins_openlayers_theme_folder(self):
+    def test_portal_skins_openlayers_lang_folder(self):
         skins = getToolByName(self.portal, 'portal_skins')
         self.assertIsNotNone(skins['geo_openlayers'].hasObject('theme'))
         self.assertIsNotNone(skins['geo_openlayers'].hasObject('lang'))
