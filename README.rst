@@ -20,7 +20,7 @@ by having a buildout configuration such as: ::
 
         [buildout]
         ...
-        eggs = 
+        eggs =
             collective.geo.openlayers
         ...
 
@@ -29,7 +29,7 @@ Install this product from the Plone control panel.
 Integration example
 -------------------
 You can include openlayers in a Plone browser page in this way
-(for further information about openlayers see 
+(for further information about openlayers see
 `other openlayers examples <http://dev.openlayers.org/releases/OpenLayers-2.10/examples/>`_)::
 
         <html xmlns="http://www.w3.org/1999/xhtml"
@@ -63,7 +63,7 @@ You can include openlayers in a Plone browser page in this way
                             new OpenLayers.Projection("EPSG:4326"),
                             map.getProjectionObject()
                         ), 12
-                     );    
+                     );
                   });
               </script>
             </metal:block>
@@ -77,7 +77,7 @@ You can include openlayers in a Plone browser page in this way
                 </div>
 
              </metal:content-core>
-           </metal:content-core> 
+           </metal:content-core>
           </body>
         </html>
 
@@ -108,6 +108,14 @@ will need adjustment::
     #Edit change note now in history
     vim ~/collective.geo.openlayers/docs/HISTROY.txt
     git commit -a -m "Updated to OpenLayers [version]"
+
+
+Mostly Harmless
+---------------
+
+.. image:: https://secure.travis-ci.org/collective/collective.geo.openlayers.png
+    :target: http://travis-ci.org/collective/collective.geo.openlayers
+
 
 Contributors
 ------------

@@ -4,6 +4,7 @@ Changelog
 2.5 (unreleased)
 ----------------
 
+- added travis-ci configurations [gborelli]
 - moved openlayers_test.pt template to tests directory [gborelli]
 - refactored tests in order to use plone.app.testing and unittest2 [gborelli]
 - Updated OpenLayers to version 2.12. ``deprecated.js`` is available
