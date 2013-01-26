@@ -1,19 +1,20 @@
 from setuptools import setup, find_packages
 import os
 
-version = '2.5.dev0'
+version = '2.5.dev'
 
 setup(name='collective.geo.openlayers',
       version=version,
       description="openlayers support for Plone",
-      long_description=open("README.rst").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      long_description=open(
+          "README.rst").read() + "\n" + open(
+              os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
-        "Framework :: Plone",
-        "Topic :: Internet",
-        "Topic :: Scientific/Engineering :: GIS",
-        "Programming Language :: Python",
-        ],
+          "Framework :: Plone",
+          "Topic :: Internet",
+          "Topic :: Scientific/Engineering :: GIS",
+          "Programming Language :: Python",
+      ],
       keywords='Zope Plone GIS KML Google Maps Bing Yahoo OpenLayers',
       author='Giorgio Borelli',
       author_email='giorgio@giorgioborelli.it',
@@ -29,9 +30,9 @@ setup(name='collective.geo.openlayers',
           # -*- Extra requirements: -*-
       ],
       extras_require={
-        'test': [
-            'plone.app.testing',
-        ],
+          'test': [
+              'plone.app.testing',
+          ],
       },
       entry_points="""
       # -*- Entry points: -*-

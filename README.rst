@@ -1,20 +1,20 @@
-collective.geo.openlayers
-=========================
-
-.. contents:: Summary
-   :local:
-
 Introduction
-------------
+============
 
-collective.geo.openlayers enables `Openlayers <http://openlayers.org/>`_ machinery into Plone.
+collective.geo.openlayers enables `Openlayers`_ machinery into Plone.
+
+.. contents:: Table of contents
+
 
 Requirements
-------------
-* Plone >= 3
+============
+
+* `Plone`_ >= 3
+
 
 Installation
-------------
+============
+
 You can install collective.geo.openlayers as part of a specific project's buildout,
 by having a buildout configuration such as: ::
 
@@ -26,11 +26,13 @@ by having a buildout configuration such as: ::
 
 Install this product from the Plone control panel.
 
+
 Integration example
--------------------
+===================
+
 You can include openlayers in a Plone browser page in this way
 (for further information about openlayers see
-`other openlayers examples <http://dev.openlayers.org/releases/OpenLayers-2.10/examples/>`_)::
+other `openlayers examples`_)::
 
         <html xmlns="http://www.w3.org/1999/xhtml"
               xmlns:metal="http://xml.zope.org/namespaces/metal"
@@ -82,7 +84,7 @@ You can include openlayers in a Plone browser page in this way
         </html>
 
 Updating this package
----------------------
+=====================
 
 When a new version of OpenLayers is released, this package can be updated
 accordingly using the following steps, keeping in mind that some paths and URLs
@@ -111,17 +113,22 @@ will need adjustment::
 
 
 Mostly Harmless
----------------
+===============
 
 .. image:: https://secure.travis-ci.org/collective/collective.geo.openlayers.png
     :target: http://travis-ci.org/collective/collective.geo.openlayers
 
 
 Contributors
-------------
+============
 
 * Giorgio Borelli - gborelli
 * Silvio Tomatis - silviot
 * David Beitey - davidjb
 * Gerhard Weis - gweis
 * Denis Krienbühl - href
+
+
+.. _Openlayers: http://openlayers.org
+.. _Plone: http://plone.org
+.. _openlayers examples: http://dev.openlayers.org/releases/OpenLayers-2.12/examples
