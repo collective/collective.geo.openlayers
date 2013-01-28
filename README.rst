@@ -3,6 +3,11 @@ Introduction
 
 collective.geo.openlayers enables `Openlayers`_ machinery into Plone.
 
+.. image:: https://secure.travis-ci.org/collective/collective.geo.openlayers.png
+    :target: http://travis-ci.org/collective/collective.geo.openlayers
+
+Found a bug? Please, use the `issue tracker`_.
+
 .. contents:: Table of contents
 
 
@@ -112,13 +117,6 @@ will need adjustment::
     git commit -a -m "Updated to OpenLayers [version]"
 
 
-Mostly Harmless
-===============
-
-.. image:: https://secure.travis-ci.org/collective/collective.geo.openlayers.png
-    :target: http://travis-ci.org/collective/collective.geo.openlayers
-
-
 Contributors
 ============
 
@@ -132,3 +130,4 @@ Contributors
 .. _Openlayers: http://openlayers.org
 .. _Plone: http://plone.org
 .. _openlayers examples: http://dev.openlayers.org/releases/OpenLayers-2.12/examples
+.. _issue tracker: https://github.com/collective/collective.geo.bundle/issues
