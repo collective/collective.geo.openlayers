@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.5 (unreleased)
+2.5 (2013-01-28)
 ----------------
 
 - added travis-ci configurations [gborelli]
