@@ -63,6 +63,18 @@ class TestSetup(unittest.TestCase):
             self.get_resource('++resource++geo-openlayers.css')
         )
 
+    def test_javascript_resources(self):
+        pjs = getToolByName(self.portal, 'portal_javascripts')
+        resources = [
+            ("OpenLayers.js", True),
+            ("proj4js-compressed.js", True)
+        ]
+
+        for id_, enabled in resources:
+            res = pjs.getResource(id_)
+            self.assertIsNotNone(res)
+            self.assertEqual(enabled, res.getEnabled())
+
 
 def test_suite():
     suite = unittest.TestSuite()

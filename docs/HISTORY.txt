@@ -4,7 +4,7 @@ Changelog
 2.6 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- added javascripts in portal_javascript registry [gborelli]
 
 
 2.5 (2013-01-28)

@@ -3,6 +3,13 @@ Introduction
 
 collective.geo.openlayers enables `Openlayers`_ machinery into Plone.
 
+This package registers two javascript files into Plone javascript registry:
+
+1. OpenLayers.js
+2. proj4js-compressed.js
+
+
+
 .. image:: https://secure.travis-ci.org/collective/collective.geo.openlayers.png
     :target: http://travis-ci.org/collective/collective.geo.openlayers
 
@@ -31,7 +38,6 @@ by having a buildout configuration such as: ::
 
 Install this product from the Plone control panel.
 
-
 Integration example
 ===================
 
@@ -50,9 +56,6 @@ other `openlayers examples`_)::
                               portal_state context/@@plone_portal_state;
                               portal_url portal_state/portal_url" />
             <metal:block metal:fill-slot="javascript_head_slot">
-              <script type="text/javascript"
-                  tal:attributes="src string:$portal_url/OpenLayers.js"></script>
-
               <!-- optional openlayers translation -->
               <script type="text/javascript"
                   tal:attributes="src string:$portal_url/lang/de.js"></script>

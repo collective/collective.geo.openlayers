@@ -15,10 +15,6 @@ the @@openlayers view must contain a div wrapper for a map
     >>> '<div id="map" ' in browser.contents
     True
 
-openlayers javascript
-    >>> '<script type="text/javascript" src="http://nohost/plone/OpenLayers.js"></script>' in browser.contents
-    True
-
 
 Now, check to make sure the CSS files from OpenLayers are accessible. This causes issues if for the client if they can't be found (eg when the directories aren't registered)
 

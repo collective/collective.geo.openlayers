@@ -17,8 +17,6 @@
     </metal:block>
 
     <metal:block metal:fill-slot="javascript_head_slot">
-      <script type="text/javascript"
-          tal:attributes="src string:$portal_url/OpenLayers.js"></script>
       <script type="text/javascript">
         <!--
           var map;
