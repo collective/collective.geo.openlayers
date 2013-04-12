@@ -38,6 +38,23 @@ by having a buildout configuration such as: ::
 
 Install this product from the Plone control panel.
 
+Upgrading
+=========
+
+Version 2.6
+-----------
+
+If you are upgrading from an older version to 2.6, you may need to run
+upgrade steps. To do this, follow these steps:
+
+#. Browse to ``portal_setup`` in the ZMI of your site
+#. Click onto the ``Upgrades`` tab
+#. Select ``collective.geo.openlayers:default`` from the drop-down list and
+   click ``Choose Profile``
+#. Observe any available upgrades and click the ``Upgrade`` button if any
+   are present.
+
+
 Integration example
 ===================
 

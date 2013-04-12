@@ -12,4 +12,12 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:upgradeStep
+      title="Upgrade to 2.6"
+      description=""
+      source="*"
+      destination="2.6"
+      handler=".upgrades.upgrade_to_26"
+      profile="collective.geo.openlayers:default" />
+
 </configure>
