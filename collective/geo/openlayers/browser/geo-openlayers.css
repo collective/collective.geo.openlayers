@@ -1,3 +1,11 @@
+/* collective geo default map styles */
+#default-cgmap, #geosettings-cgmap {height:450px}
+#geoshapemap {height:500px;}
+.widget-cgmap {height:500px;}
+/* openlayers style fix */
+.olControlModifyFeatureItemActive {background-position:-1px -23px}
+.olControlModifyFeatureItemInactive {background-position:-1px 0px}
+
 /* drop down menus fix */
 .actionMenu.activated .actionMenuContent,
 #contentActionMenus dl.actionMenu.activated dd{z-index:1008}
@@ -13,15 +21,11 @@ div.olMapViewport{z-index: 0}
 .olPopup {width:40%;}
 .olPopup p{margin:0;font-size: .9em}
 .olPopup h2{font-size:1.2em}
-/* collective geo default map styles */
-#default-cgmap, #geosettings-cgmap {height:450px}
-#geoshapemap {height:500px;}
-.widget-cgmap {height:500px;}
-/* openlayers style fix */
-.olControlModifyFeatureItemActive {background-position:-1px -23px}
-.olControlModifyFeatureItemInactive {background-position:-1px 0px}
+#content div.olControlZoom a:link  {
+    color: white;
+}
 
-/* XXX: Move to other package */
+/* collective.geo forms style */
 #coordinates-form #formfield-form-widgets-map_viewlet_position,
 #formfield-form-widgets-imgpath,#formfield-form-widgets-map_width,#formfield-form-widgets-map_height,#formfield-form-widgets-display_properties {clear:none;float:right;width:47%}
 #formfield-form-widgets-marker_image,#formfield-form-widgets-marker_image_size,#formfield-form-widgets-linecolor,#formfield-form-widgets-polygoncolor,#formfield-form-widgets-linewidth {clear:left;float:left;width:47%}
@@ -40,6 +44,7 @@ div.olMapViewport{z-index: 0}
     float: right;
 }
 
+/* geocoder style */
 .geocoder-widget .results {
     background-color: white;
     border: 0.1em solid #CCCCCC;
@@ -50,4 +55,28 @@ div.olMapViewport{z-index: 0}
     z-index: 3;
 }
 .geocoder-widget .results a {cursor: pointer}
-/*#location-options li.selected a {color: red!important}*/
+
+
+/*  OpenLayers overrides */
+.olControlLayerSwitcher .maximizeDiv,
+.olControlLayerSwitcher .layersDiv {
+    background-color: rgba(0, 60, 136, 0.6);
+    border-radius: 4px 0 0 4px;
+    color: white;
+}
+
+.olControlLayerSwitcher .maximizeDiv:after {
+    content: '+';
+    font-size: 1.5em;
+    text-align: center;
+    margin-left: 4px;
+    line-height: 18px;
+}
+
+.olControlLayerSwitcher .maximizeDiv img {
+    display: none;
+}
+
+.olControlLayerSwitcher .layersDiv label {
+    margin-left: 0.5em
+}
