@@ -17,8 +17,6 @@ div.olMapViewport{z-index: 0}
 #default-cgmap, #geosettings-cgmap {height:450px}
 #geoshapemap {height:500px;}
 .widget-cgmap {height:500px;}
-#location-options li a {cursor: pointer}
-#location-options li.selected a {color: red!important}
 /* openlayers style fix */
 .olControlModifyFeatureItemActive {background-position:-1px -23px}
 .olControlModifyFeatureItemInactive {background-position:-1px 0px}
@@ -41,3 +39,15 @@ div.olMapViewport{z-index: 0}
 #form-buttons-remove-georeference {
     float: right;
 }
+
+.geocoder-widget .results {
+    background-color: white;
+    border: 0.1em solid #CCCCCC;
+    margin: 0.2em 0;
+    padding: 1em 0;
+    position: absolute;
+    width: 400px;
+    z-index: 3;
+}
+.geocoder-widget .results a {cursor: pointer}
+/*#location-options li.selected a {color: red!important}*/

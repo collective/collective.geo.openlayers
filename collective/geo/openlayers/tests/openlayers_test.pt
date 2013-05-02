@@ -3,48 +3,48 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       metal:use-macro="here/main_template/macros/master">
   <head>
-    <metal:block fill-slot="top_slot"
-          tal:define="dummy python:request.set('disable_border',1);
-                      portal_state context/@@plone_portal_state;
-                      portal_url portal_state/portal_url" />
-
-    <metal:block metal:fill-slot="css_head_slot">
-      #map {
-          width: 100%;
-          height: 500px;
-          border: 1px solid black;
-          position: relative}
+    <metal:block metal:fill-slot="style_slot">
+        <style type="text/css">
+          #map {
+              width: 100%;
+              height: 500px;
+              border: 1px solid black;
+              position: relative
+          }
+        </style>
     </metal:block>
 
     <metal:block metal:fill-slot="javascript_head_slot">
       <script type="text/javascript">
         <!--
-          var map;
-          jq(window).load(function() {
-            map = new OpenLayers.Map('map-test');
-            var wms = new OpenLayers.Layer.WMS(
-                            "OpenLayers WMS",
-                            "http://labs.metacarta.com/wms/vmap0",
-                            {layers: 'basic'}
-                        );
-            map.addLayers([wms]);
-            mousecontrol = new OpenLayers.Control.MousePosition(),
-            map.addControl(mousecontrol);
+          (function ($) {
+            var map;
+            jq(window).load(function() {
+              map = new OpenLayers.Map('map');
+              var wms = new OpenLayers.Layer.WMS(
+                              "OpenLayers WMS",
+                              "http://labs.metacarta.com/wms/vmap0",
+                              {layers: 'basic'}
+                          );
+              map.addLayer(wms);
+              mousecontrol = new OpenLayers.Control.MousePosition(),
+              map.addControl(mousecontrol);
 
-            map.setCenter(new OpenLayers.LonLat(0, 0), 3);
+              map.setCenter(new OpenLayers.LonLat(7, 45), 3);
 
-          });
+            });
+          }(jQuery));
         // -->
       </script>
     </metal:block>
   </head>
-
   <body>
-    <metal:main fill-slot="main">
-      <div>
-        <h1 tal:content="context/Title"></h1>
-        <div id="map" class="olMap"><!-- openlayers map --></div>
-      </div>
-    </metal:main>
+    <metal:content fill-slot="content-core">
+        <metal:content define-macro="content-core">
+          <div id="map" class="olMap">
+            <!-- openlayers map -->
+          </div>
+        </metal:content>
+    </metal:content>
   </body>
 </html>
