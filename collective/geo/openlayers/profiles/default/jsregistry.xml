@@ -2,7 +2,7 @@
 <object name="portal_javascripts">
   <javascript
     cacheable="True"
-    compression="safe"
+    compression="none"
     cookable="True"
     enabled="True"
     expression=""
@@ -15,6 +15,7 @@
     enabled="True"
     expression=""
     id="proj4js-compressed.js"
+    insert-after="OpenLayers.js"
     inline="False" />
 
 </object>
