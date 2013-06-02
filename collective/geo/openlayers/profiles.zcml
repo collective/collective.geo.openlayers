@@ -13,11 +13,11 @@
       />
 
   <genericsetup:upgradeStep
-      title="Upgrade to 2.6"
+      title="Upgrade to 3.0"
       description=""
       source="*"
-      destination="2.6"
-      handler=".upgrades.upgrade_to_26"
+      destination="30"
+      handler=".upgrades.upgrade_to_30"
       profile="collective.geo.openlayers:default" />
 
 </configure>

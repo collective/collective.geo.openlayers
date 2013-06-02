@@ -27,24 +27,17 @@ Requirements
 Installation
 ============
 
-You can install collective.geo.openlayers as part of a specific project's buildout,
-by having a buildout configuration such as: ::
+This addon can be installed has any other addons, please follow official
+documentation_.
 
-        [buildout]
-        ...
-        eggs =
-            collective.geo.openlayers
-        ...
-
-Install this product from the Plone control panel.
 
 Upgrading
 =========
 
-Version 2.6
+Version 3.0
 -----------
 
-If you are upgrading from an older version to 2.6, you may need to run
+If you are upgrading from an older version to 3.0, you may need to run
 upgrade steps. To do this, follow these steps:
 
 #. Browse to ``portal_setup`` in the ZMI of your site
@@ -151,3 +144,4 @@ Contributors
 .. _Plone: http://plone.org
 .. _openlayers examples: http://dev.openlayers.org/releases/OpenLayers-2.12/examples
 .. _issue tracker: https://github.com/collective/collective.geo.bundle/issues
+.. _documentation: http://plone.org/documentation/kb/installing-add-ons-quick-how-to

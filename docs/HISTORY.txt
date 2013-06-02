@@ -1,8 +1,8 @@
 Changelog
 =========
 
-2.6 (unreleased)
-----------------
+3.0b1 (2013-06-02)
+------------------
 
 - added javascripts in portal_javascript registry [gborelli]
 
