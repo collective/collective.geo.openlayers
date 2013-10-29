@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '3.0b2.dev0'
+version = '3.0.dev0'
 
 setup(name='collective.geo.openlayers',
       version=version,
@@ -20,14 +20,14 @@ setup(name='collective.geo.openlayers',
       author_email='giorgio@giorgioborelli.it',
       url='https://github.com/collective/collective.geo.openlayers',
       license='GPL',
-      packages=find_packages(exclude=['ez_setup']),
+      packages=find_packages('src'),
+      package_dir={'': 'src'},
       namespace_packages=['collective', 'collective.geo'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
           'setuptools',
           'Products.CMFCore',
-          # -*- Extra requirements: -*-
       ],
       extras_require={
           'test': [

@@ -1,14 +1,12 @@
 Changelog
 =========
 
-3.0b2 (unreleased)
-------------------
 
-- Nothing changed yet.
+3.0 (unreleased)
+----------------
 
-
-3.0b1 (2013-06-02)
-------------------
+- changed package layout
+  [gborelli]
 
 - added javascripts in portal_javascript registry [gborelli]
 
