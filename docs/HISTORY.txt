@@ -5,7 +5,8 @@ Changelog
 3.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add style for IGeoFeatureStyle behavior
+  [gborelli]
 
 
 3.0 (2013-10-29)
