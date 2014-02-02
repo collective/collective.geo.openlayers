@@ -5,6 +5,9 @@ Changelog
 3.1 (unreleased)
 ----------------
 
+- Updated OpenLayers to 2.13.1
+  [gborelli]
+
 - Add style for IGeoFeatureStyle behavior
   [gborelli]
 

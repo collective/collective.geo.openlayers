@@ -111,9 +111,9 @@ will need adjustment::
     cd ~/collective.geo.openlayers
     cd collective/geo/openlayers/skins/
     #Change URL accordingly
-    wget http://openlayers.org/download/OpenLayers-2.12.tar.gz
+    wget http://openlayers.org/download/OpenLayers-<STABLE VERSION>.tar.gz
     tar xf OpenLayers*.tar.gz
-    mv OpenLayers-2.12 OpenLayers
+    mv OpenLayers-<STABLE VERSION> OpenLayers
     #Maintain 3rd party files
     mv geo_openlayers/plone3_fix_form_tabbing.js geo_openlayers/proj4js-compressed.js .
     git rm geo_openlayers/* -r
@@ -126,7 +126,7 @@ will need adjustment::
     mv OpenLayers/lib/OpenLayers/Lang/*.js geo_openlayers/lang/
 
     #Edit change note now in history
-    vim ~/collective.geo.openlayers/docs/HISTROY.txt
+    vim ~/collective.geo.openlayers/docs/HISTORY.txt
     git commit -a -m "Updated to OpenLayers [version]"
 
 
