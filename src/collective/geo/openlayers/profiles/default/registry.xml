@@ -5,7 +5,7 @@
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
       <value key="js">OpenLayers.js</value>
       <value key="css">
-          <elemetn>theme/default/style.css</elemetn>
+          <element>theme/default/style.css</element>
           <element>theme/default/google.css</element>
           <element>++resource++geo-openlayers.css</element>
       </value>
