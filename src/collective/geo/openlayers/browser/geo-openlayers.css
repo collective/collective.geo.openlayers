@@ -54,9 +54,6 @@ div.olMapViewport{z-index: 0}
 }
 
 #map-form-wrapper {
-    border: 1px solid #dddddd;
-    border-top: 0;
-    height: 550px;
 }
 
 #formfield-form-widgets-IGeoFeatureStyle-use_custom_styles,
