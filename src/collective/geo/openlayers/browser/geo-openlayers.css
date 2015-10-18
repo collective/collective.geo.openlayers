@@ -53,9 +53,6 @@ div.olMapViewport{z-index: 0}
     clear:left;float:left;width:47%
 }
 
-#map-form-wrapper {
-}
-
 #formfield-form-widgets-IGeoFeatureStyle-use_custom_styles,
 #formfield-form-widgets-use_custom_styles {
     border: 1px solid #999966;

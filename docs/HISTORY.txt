@@ -5,7 +5,14 @@ Changelog
 3.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fixed tests and doctests for plone5 and external api modifications
+  [pbauer]
+
+- Modified openlayer css to fix collectivegeo-controlpanel issues
+  [pbauer]
+
+- Fixed typo in resources registration
+  [pbauer]
 
 
 3.1 (2014-02-26)
