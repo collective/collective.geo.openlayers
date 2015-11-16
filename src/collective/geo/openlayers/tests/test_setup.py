@@ -64,16 +64,10 @@ class TestSetup(unittest.TestCase):
         )
 
     def test_javascript_resources(self):
-        pjs = getToolByName(self.portal, 'portal_javascripts')
-        resources = [
-            ("OpenLayers.js", True),
-            ("proj4js-compressed.js", True)
-        ]
-
-        for id_, enabled in resources:
-            res = pjs.getResource(id_)
-            self.assertIsNotNone(res)
-            self.assertEqual(enabled, res.getEnabled())
+        from zope.component import getUtility
+        from plone.registry.interfaces import IRegistry
+        registry = getUtility(IRegistry)
+        self.assertTrue(registry['plone.bundles/openlayers.enabled'])
 
 
 def test_suite():

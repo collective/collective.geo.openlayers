@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<registry>
+
+  <records prefix="plone.resources/OpenLayers"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">OpenLayers.js</value>
+      <value key="css">
+          <element>theme/default/style.css</element>
+          <element>theme/default/google.css</element>
+          <element>++resource++geo-openlayers.css</element>
+      </value>
+  </records>
+  <records prefix="plone.resources/proj4js-compressed"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">proj4js-compressed.js</value>
+  </records>
+
+  <records prefix="plone.bundles/openlayers"
+            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>OpenLayers</element>
+      <element>proj4js-compressed</element>
+    </value>
+    <value key="compile">False</value>
+    <value key="enabled">True</value>
+    <value key="jscompilation">++plone++static/openlayer-compiled.min.js</value>
+    <value key="csscompilation">++plone++static/openlayer-compiled.css</value>
+    <value key="last_compilation">2015-05-02 00:00:00</value>
+    <value key="depends">plone-logged-in</value>
+  </records>
+
+</registry>
+
+
