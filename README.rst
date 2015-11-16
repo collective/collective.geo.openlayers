@@ -21,7 +21,9 @@ Found a bug? Please, use the `issue tracker`_.
 Requirements
 ============
 
-* `Plone`_ >= 3
+
+* `Plone`_ >= 3 and < 5.0 for collective.geo.openlayers version 3.x
+* `Plone`_ >= 5.0 for collective.geo.openlayers version 4.x
 
 
 Installation
