@@ -5,6 +5,7 @@
 
     <include package=".browser" />
     <include file="profiles.zcml" />
-    <include file="skins.zcml" />
+
+    <!-- include package=".demo" /-->
 
 </configure>
