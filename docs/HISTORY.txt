@@ -2,8 +2,18 @@ Changelog
 =========
 
 
-3.2 (unreleased)
+4.0 (unreleased)
 ----------------
+
+- Added nodejs/bower configuration and specific Makefile in order to have a simple way
+  to compile and update OpenLayers.js
+  [giorgio]
+
+- Moved proj4js and geo-openlayers to plone resources directory
+  [gborelli]
+
+- Removed skin layer, use plone resources instead
+  [gborelli]
 
 - Fixed tests and doctests for plone5 and external api modifications
   [pbauer]
