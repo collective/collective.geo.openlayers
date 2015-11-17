@@ -5,12 +5,4 @@
 
   <include file="configure.zcml" />
 
-  <!-- Openlayers Test view -->
-  <browser:page
-      name="openlayers_test"
-      for="*"
-      template="tests/openlayers_test.pt"
-      layer=".browser.interfaces.IOpenlayers"
-      permission="zope2.View" />
-
 </configure>

@@ -14,10 +14,19 @@ class TestSetup(unittest.TestCase):
             name, None
         )
 
-    # def test_portal_skins_translations(self):
-    #     self.assertIsNotNone(
-    #         self.get_resource('lang/de.js')
-    #     )
+    def test_openlayers_resource(self):
+        self.assertIsNotNone(
+            self.get_resource(
+                '++plone++openlayers.static/openlayers/OpenLayers.js'
+            )
+        )
+
+    def test_translations_resource(self):
+        self.assertIsNotNone(
+            self.get_resource(
+                '++plone++openlayers.static/openlayers/Lang/de.js'
+            )
+        )
 
     def test_resource_js(self):
         self.assertIsNotNone(
