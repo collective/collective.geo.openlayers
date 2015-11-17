@@ -23,3 +23,5 @@ var
 .project
 .pydevproject
 .settings
+node_modules
+bower_components

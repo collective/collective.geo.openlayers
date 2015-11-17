@@ -1,0 +1,23 @@
+{
+  "name": "openlayers-plone",
+  "description": "OpenLayers Plone",
+  "authors": [
+    "Giorgio Borelli <giorgio.borelli@abstract.it>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "openlayers",
+    "Plone"
+  ],
+  "dependencies": {
+    "openlayers": "release-2.13.1"
+
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
