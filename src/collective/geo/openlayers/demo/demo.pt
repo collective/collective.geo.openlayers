@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="here/main_template/macros/master">
+  <head>
+    <metal:block metal:fill-slot="javascript_head_slot">
+      <script type="text/javascript">
+        <!--
+          (function ($) {
+            var map;
+            $(window).load(function() {
+              map = new OpenLayers.Map('map',{
+                theme: null
+              });
+              map.addLayer(new OpenLayers.Layer.OSM("OpenStreetMap"));
+              map.setCenter(new OpenLayers.LonLat(7, 45).transform(
+                  new OpenLayers.Projection("EPSG:4326"),
+                  map.getProjectionObject()
+              ), 5);
+
+            });
+          }(jQuery));
+        // -->
+      </script>
+    </metal:block>
+  </head>
+  <body>
+    <metal:content fill-slot="content-core">
+        <metal:content define-macro="content-core">
+          <div id="map" class="olMap widget-cgmap">
+            <!-- openlayers map -->
+          </div>
+        </metal:content>
+    </metal:content>
+  </body>
+</html>
