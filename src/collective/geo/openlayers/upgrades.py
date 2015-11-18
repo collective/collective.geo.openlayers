@@ -1,6 +1,3 @@
-from zope.component.hooks import getSite
-from zope.component import getGlobalSiteManager
-
 default_profile = 'profile-collective.geo.openlayers:default'
 
 
