@@ -5,7 +5,9 @@ Changelog
 3.2 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Update Openlayers to latest Openlayers 2 version (https://github.com/openlayers/ol2/commit/6e540a95c968651c1ae37e32a5f076c1703ec446).
+  There are no ol2 releases anymore, so that's way I built this one from the mentioned commit.
+  [mathias.leimgruber]
 
 
 3.1 (2014-02-26)

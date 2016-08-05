@@ -106,31 +106,25 @@ other `openlayers examples`_)::
 Updating this package
 =====================
 
-When a new version of OpenLayers is released, this package can be updated
-accordingly using the following steps, keeping in mind that some paths and URLs
-will need adjustment::
+There are no new versions of openlayers 2, we need to build our own from master branch of the ol2 respository.
 
-    cd ~/collective.geo.openlayers
-    cd collective/geo/openlayers/skins/
-    #Change URL accordingly
-    wget http://openlayers.org/download/OpenLayers-<STABLE VERSION>.tar.gz
-    tar xf OpenLayers*.tar.gz
-    mv OpenLayers-<STABLE VERSION> OpenLayers
-    #Maintain 3rd party files
-    mv geo_openlayers/plone3_fix_form_tabbing.js geo_openlayers/proj4js-compressed.js .
-    git rm geo_openlayers/* -r
-    mkdir geo_openlayers
-    #Only select the files we need
-    mv OpenLayers/{*.js,*.txt,*.md,img,theme} geo_openlayers/
-    mv *.js geo_openlayers/
-    git add geo_openlayers/
-    #Copy the translation files
-    mv OpenLayers/lib/OpenLayers/Lang/*.js geo_openlayers/lang/
+1. Goto skins directory of this package
+2. Download latest master from github `wget https://github.com/openlayers/ol2/archive/master.zip`
+3. `unzip master.zip`
+4. Install closure-compiler.jar (Check Openalayers Readme)
+5. Build Openlayers.js, Openlayers.debug.js, Openlayers.mobile.js, Openlayers.mobile.debug.js, Openlayers.light.js, Openlayers.light.debug.js
 
-    #Edit change note now in history
-    vim ~/collective.geo.openlayers/docs/HISTORY.txt
-    git commit -a -m "Updated to OpenLayers [version]"
+    - `python build.py -c closure full OpenLayers.js`
+    - `python build.py -c none full OpenLayers.debug.js`
+    - `python build.py -c closure mobile OpenLayers.mobile.js`
+    - `python build.py -c none mobile OpenLayers.mobile.debug.js`
+    - `python build.py -c closure light OpenLayers.light.js`
+    - `python build.py -c none light OpenLayers.light.debug.js`
 
+6. Move them to skins/geo_openlayers
+7. Copy `img` and `theme` files to skins/geo_openlayers
+8. Copy `lib/Openlayers/Lang/*` to skins(geo_openlayers/lang)
+9. Commit changes, please include hash of Openlayers commit you've used to build ol2.
 
 Contributors
 ============
