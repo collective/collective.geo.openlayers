@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '3.2b1'
+version = '3.2b2.dev0'
 
 setup(name='collective.geo.openlayers',
       version=version,
