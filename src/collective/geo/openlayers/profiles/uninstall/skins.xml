@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+  <object
+      remove="True" 
+      name="geo_openlayers"
+      meta_type="Filesystem Directory View"
+      directory="collective.geo.openlayers:skins/geo_openlayers"/>
+  <skin-path name="*">
+    <layer remove="True" name="geo_openlayers"/>
+  </skin-path>
+</object>

@@ -11,6 +11,13 @@
       description='Extension profile for Collective Geo Openlayers.'
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Collective Geo Openlayers (uninstall)"
+      directory="profiles/uninstall"
+      description='Uninstall extension profile for Collective Geo Openlayers.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
 
   <genericsetup:upgradeStep
       title="Upgrade to 3.0"
