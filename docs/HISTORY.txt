@@ -5,7 +5,8 @@ Changelog
 3.2b2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add uninstall profile.
+  [thet]
 
 
 3.2b1 (2016-08-05)
