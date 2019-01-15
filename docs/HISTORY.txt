@@ -5,6 +5,12 @@ Changelog
 4.0 (unreleased)
 ----------------
 
+- Use self build Openlayers.js from 3.x branch. [mathias.leimgruber]
+
+  - Display issues with the terrain google maps layer. Also see https://github.com/collective/collective.geo.openlayers/pull/6
+  - Fix getting several images in static folder. Fixed by Openlayers.js in _getScriptLocation method.
+
+
 - Added nodejs/bower configuration and specific Makefile in order to have a simple way
   to compile and update OpenLayers.js
   [giorgio]
