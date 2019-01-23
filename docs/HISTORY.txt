@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-4.0 (unreleased)
+4.0 (2019-01-23)
 ----------------
 
 - Use self build Openlayers.js from 3.x branch. [mathias.leimgruber]
